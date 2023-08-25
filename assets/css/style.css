@@ -1544,9 +1544,9 @@ textarea.input-field {
 
 .column p {
   font-weight: 400;
-  font-size: 13px;
+  font-size: 15px;
   margin: 0px;
-  line-height: 26px;
+  line-height: 1.6;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;

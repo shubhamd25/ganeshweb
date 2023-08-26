@@ -1583,5 +1583,5 @@ textarea.input-field {
   border-radius: 20px;
   padding: 20px;
   text-align: left;
-  background-color:white;
+  background: var(--bg-secondary);
 }

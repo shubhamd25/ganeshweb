@@ -483,7 +483,7 @@ body.active {
 .navbar-link::before {
   content: "";
   position: absolute;
-  top: 100%;
+  top: 50%;
   transform: translateY(-50%);
   left: 0;
   height: 5px;
@@ -496,9 +496,6 @@ body.active {
   width: 100%;
 }
 
-.navbar-link :hover{
-  color: var(--raw-seinna);
-}
 
 
 
@@ -1556,7 +1553,7 @@ textarea.input-field {
   overflow: hidden;
 }
 
-.column h4 {
+.column h4{
   line-height: 24px;
   font-size: 16px;
   text-transform: uppercase;
@@ -1590,188 +1587,25 @@ textarea.input-field {
 }
 /* styles.css */
 
-
-
-
-
-/* code by me */
-.card1 {
-  background-color: transparent;
-  border-radius: 50%; /* Make the cards circular */
-  text-align: center;
-  padding: 20px;
-  margin-right: 20px; /* Add spacing between cards */
-  transition: opacity 2s; /* Add a smooth transition effect */
-  position: relative; /* Add relative positioning for the image */
-  overflow: hidden; /* Hide overflow to clip image */
+.containermutual {
+  background-image: url('./assets/images/shm1.png');
+  background-size: cover;
+  background-position: center;
 }
 
-.card1:hover {
-  opacity: 0.7; /* Reduce opacity on hover */
+/* Create a 3x3 grid */
+.grid1 {
+  display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 10px; /* Adjust the gap as needed */
+    max-width: 50%; /* 50% of the container width */
 }
-
-.card1 img {
-  width: 100%; /* Set the image width to 100% of its container */
-  height: auto; /* Automatically adjust the height */
-  border: 2px solid #007bff; /* Add a border to the image */
-  border-radius: 50%; /* Make the images circular */
-  position: absolute; /* Absolute positioning to enable slide-up effect */
-   /* Initially hide the image below the card */
-  left: 0;
-  transition: bottom 2s; /* Add a slide-up transition effect */
-}
-
-.card1:hover img {
-  bottom: 0; /* Slide the image up on hover */
-}
-
-
-.project1 {
-  padding-block: var(--section-padding);
-  
-}
-
-.project-list>li {
-  margin-bottom: 25px;
-}
-
-.project-card1 {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius-12);
-  box-shadow: 2px 4px 6px hsla(0, 0%, 0%, 0.2);
-}
-
-.project-card1::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  transition: var(--transition-1);
-}
-
-.project-card1:is(:hover, :focus)::after {
-  /*background: hsla(0, 0%, 100%, 0.1);*/
-  backdrop-filter: blur(0.5px);
-}
-
-.project-card1 .card-content1 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50%;
-  padding: 20px;
-}
-
-.project-card1 .card-title1 {
-  margin-bottom: 10px;
-}
-
-.project-card1 :is(.card-title, .publish-date){
-  background: var(--bg-primary);
-  padding: 6px 12px;
-  width: max-content;
-  box-shadow: var(--shadow-1);
-  transform: translateY(20px);
-  opacity: 0;
-  transition: var(--transition-1);
-}
-
-.project-card1 .publish-date1 {
-  font-size: var(--fs-6);
-  color: var(--color-primary);
-  transition-delay: 0s;
-}
-
-.project-card1:is(:hover, :focus) :is(.card-title1, .publish-date1) {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.project-card1:is(:hover, :focus) .publish-date1 {
-  transition-delay: 0.1s;
-}
-
-.load-more1 {
-  font-size: var(--fs-4);
-  color: var(--raw-seinna);
-  text-decoration: underline;
-  margin-inline: auto;
-}
-
-.section-text1 {
-  color: black;
-  line-height: 1.8;
-  margin-bottom: 30px;
-}
-.card1 img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%; /* Make the images circular */
-}
-
-.row1 {
-  display: flex;
-  justify-content: flex-start; /* Align the cards to the left */
-  margin-top: 20px;
-  width: 50%; /* Set the card section to 50% of the screen width */
-  margin: 0 auto; /* Center the card section horizontally */
-  padding: 40px;
-}
-
-/* Float four columns side by side */
-.column1 {
-  float: left;
-  width: 20%;
-  padding-right: 1rem;
-  margin-bottom: 10px;
-  position: relative;
-
-}
-
-
-/* Remove extra left and right margins, due to padding */
-.row1 {
-  box-sizing: border-box;
-  margin-left: 1rem;
-  display: flex;
-  justify-content: center;
-  padding-top: 0rem;
-}
-
-/* Clear floats after the columns */
-.row1:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.column1 img {
-  margin-bottom: 20px;
-}
-
-
-.column1 h4{
-  line-height: 24px;
-  font-size: 16px;
-  text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-}
-
-/* Responsive columns */
-@media screen and (max-width: 1200px) {
-  .column1 {
-    width: 98%;
-    display: block;
-    padding-right: 0.5rem;
-
-  }
-
-  .row1 {
-    display: block !important;
-    margin-left: 0.5rem;
-
-  }
-
+/* Style each grid item */
+.grid-item1 {
+  background: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    padding: 20px; /* Adjust as needed */
+    text-align: center;
+    font-size: 24px; /* Adjust as needed */
+    width: 100%; /* Each grid item takes up 100% of the column width */
+    height: 100px; /* Adjust the height as needed */
 }

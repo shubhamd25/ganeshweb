@@ -2,506 +2,496 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cashflow</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Cashflow</title>
 
-    <!-- 
+  <!-- 
     - favicon
   -->
-    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
-    <!-- 
+  <!-- 
     - custom css link
   -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="./styles.css">
 
-    <!-- 
+  <!-- 
     - google font link
   -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
-        rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Create four equal columns that floats next to each other */
+    .grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 20px;
+ 
+  padding: 10px;
+}
+.image{
+width:80px;
+height: 70px;
+ border-radius: 50%;
+ border:1px black;
+
+}
+
+.grid-container > div:hover img {
+  transform: scale(1.1); /* Increase size on hover */
+}
+.grid-container > div {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  font-size: 30px;
+  
+}
+.grid-fit{
+      width: 60%;
+    /* height: 40vh; */
+    position: relative;
+    top: 9rem;
+    left: 3rem;
+    }
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: auto auto;
+    gap: 5px;
+    padding: 5px;
+  }
+  .grid-container > div {
+    font-size: 20px;
+   
+  }
+}
+  </style>
 </head>
 
 <body id="top" class="light_theme">
 
-    <!-- 
+  <!-- 
     - #HEADER
   -->
 
-    <header class="header" data-header>
-        <div class="container">
+  <header class="header" data-header>
+    <div class="container">
 
-            <h1 class="h1 logo">
-                <a href="#">MYCASHFLOW<span>.</span></a>
-            </h1>
+      <h1 class="h1 logo">
+        <a href="#">MYCASHFLOW<span>.</span></a>
+      </h1>
 
-            <div class="navbar-actions">
+      <div class="navbar-actions">
 
-                <div class="btn-group">
+        <div class="btn-group">
 
-                    <button class="btn btn-primary" style="padding: 7px 12px;">Login</button>
-                </div>
-
-                <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
-                    <span class="icon"></span>
-                </button>
-
-            </div>
-
-            <button class="nav-toggle-btn" aria-label="Toggle Menu" title="Toggle Menu" data-nav-toggle-btn>
-                <span class="one"></span>
-                <span class="two"></span>
-                <span class="three"></span>
-            </button>
-
-            <nav class="navbar" data-navbar>
-                <ul class="navbar-list">
-
-                    <li>
-                        <a href="#home" class="navbar-link">Home.</a>
-                    </li>
-
-                    <li>
-                        <a href="#contact" class="navbar-link">About.</a>
-                    </li>
-
-                    <li>
-                        <a href="./Prod_Offerings/index.html" class="navbar-link">Product Offering.</a>
-                    </li>
-
-                    <li>
-                        <a href="#portfolio" class="navbar-link">Calculators.</a>
-                    </li>
-
-                    <li>
-                        <a href="#contact" class="navbar-link">Blog.</a>
-                    </li>
-
-                </ul>
-            </nav>
-
-        </div>
-    </header>
-
-    <main>
-        <!--main image-->
-        <div class="mainimg">
-            <div style="
-            position: relative;
-            top: 20rem;
-            left: 4rem;">
-                <table class="left-column">
-
-                    <tr>
-                        <td>
-                            <div class="container1">
-                                <img src="img_avatar.png" alt="Avatar" class="image">
-                                <div class="overlay">
-                                    <img src="img_avatar.png" alt="Avatar">
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="container1">
-                                <img src="img_avatar.png" alt="Avatar" class="image">
-                                <div class="overlay">
-                                    <img src="img_avatar.png" alt="Avatar">
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="container1">
-                                <img src="img_avatar.png" alt="Avatar" class="image">
-                                <div class="overlay">
-                                    <img src="img_avatar.png" alt="Avatar">
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="container1">
-                                <img src="img_avatar.png" alt="Avatar" class="image">
-                                <div class="overlay">
-                                    <img src="img_avatar.png" alt="Avatar">
-                                </div>
-                            </div>
-                        </td>
-                        <!-- ... (rest of your table rows) ... -->
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="container1">
-                                <img src="img_avatar.png" alt="Avatar" class="image">
-                                <div class="overlay">
-                                    <img src="img_avatar.png" alt="Avatar">
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="container1">
-                                <img src="img_avatar.png" alt="Avatar" class="image">
-                                <div class="overlay">
-                                    <img src="img_avatar.png" alt="Avatar">
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="container1">
-                                <img src="img_avatar.png" alt="Avatar" class="image">
-                                <div class="overlay">
-                                    <img src="img_avatar.png" alt="Avatar">
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="container1">
-                                <img src="img_avatar.png" alt="Avatar" class="image">
-                                <div class="overlay">
-                                    <img src="img_avatar.png" alt="Avatar">
-                                </div>
-                            </div>
-                        </td>
-                        <!-- ... (rest of your table rows) ... -->
-                    </tr>
-                </table>
-            </div>
+          <button class="btn btn-primary" style="padding: 7px 12px;">Login</button>
         </div>
 
-        <!--advantages-->
-        <section class="project container" id="portfolio">
+        <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
+          <span class="icon"></span>
+        </button>
+
+      </div>
+
+      <button class="nav-toggle-btn" aria-label="Toggle Menu" title="Toggle Menu" data-nav-toggle-btn>
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+      </button>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#home" class="navbar-link">Home.</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="navbar-link">About.</a>
+          </li>
+
+          <li>
+            <a href="./Prod_Offerings/index.html" class="navbar-link">Product Offering.</a>
+          </li>
+
+          <li>
+            <a href="#portfolio" class="navbar-link">Calculators.</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="navbar-link">Blog.</a>
+          </li>
+
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+    <!--main image-->
+    <div class="mainimg">
+      <div class="grid-fit">
 
 
 
-            <div class="project-content section-content">
-                <h2 class="h3 section-title" style="margin-right: auto; margin-left: auto;">My Cashflow Advantages</h2>
-            </div>
 
-            <div class="row">
-                <div class="column">
-                    <div class="card">
-                        <img src="./assets/images/StockBrokingBi.webp" width="63" height="65" alt="Alternate Text">
-                        <h4 class="h3 contact-item-title">Plan Options</h4>
-                        <p class="section-text">
-                            We offer best insurance plans option looking at the requirement of client with best efforts.
-                        </p>
+        <div class="grid-container">
+          <div><img src="../pages/img/shm.png" class="image"></div>
+          <div><img src="../pages/img/shm.png" class="image"></div>
+          <div><img src="../pages/img/shm.png" class="image"></div>  
+          <div><img src="../pages/img/shm.png" class="image"></div>
+          <div><img src="../pages/img/shm.png" class="image"></div>
+          <div><img src="../pages/img/shm.png" class="image"></div>
+          <div><img src="../pages/img/shm.png" class="image"></div>
+          <div><img src="../pages/img/shm.png" class="image"></div>
+        </div>
 
-                    </div>
-                </div>
+      </div>
+    </div>
 
-
-                <div class="column">
-                    <div class="card">
-                        <img src="./assets/images/StockBrokingBi.webp" width="63" height="65" alt="Alternate Text">
-                        <h4 class="h3 contact-item-title">Stock Broking</h4>
-                        <p class="section-text">
-                            We offer best insurance plans option looking at the requirement of client with best efforts.
-                        </p>
-                    </div>
-                </div>
-
-
-                <div class="column">
-                    <div class="card">
-                        <img src="./assets/images/StockBrokingBi.webp" width="63" height="65" alt="Alternate Text">
-                        <h4 class="h3 contact-item-title">Stock Broking</h4>
-                        <p class="section-text">
-                            We offer best insurance plans option looking at the requirement of client with best efforts.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="column">
-                    <div class="card">
-                        <img src="./assets/images/StockBrokingBi.webp" width="63" height="65" alt="Alternate Text">
-                        <h4 class="h3 contact-item-title">Stock Broking</h4>
-                        <p class="section-text">
-                            We offer best insurance plans option looking at the requirement of client with best efforts.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
+    <!--advantages-->
+    <section class="project container" id="portfolio">
 
 
 
-        </section>
+      <div class="project-content section-content">
+        <h2 class="h3 section-title" style="margin-right: auto; margin-left: auto;">My Cashflow Advantages</h2>
+      </div>
 
-        <!-- 
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="../assets/images/StockBrokingBi.webp" width="63" height="65" alt="Alternate Text">
+            <h4 class="h3 contact-item-title">Plan Options</h4>
+            <p class="section-text">
+              We offer best insurance plans option looking at the requirement of client with best efforts.
+            </p>
+
+          </div>
+        </div>
+
+
+        <div class="column">
+          <div class="card">
+            <img src="./assets/images/StockBrokingBi.webp" width="63" height="65" alt="Alternate Text">
+            <h4 class="h3 contact-item-title">Stock Broking</h4>
+            <p class="section-text">
+              We offer best insurance plans option looking at the requirement of client with best efforts.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="column">
+          <div class="card">
+            <img src="./assets/images/StockBrokingBi.webp" width="63" height="65" alt="Alternate Text">
+            <h4 class="h3 contact-item-title">Stock Broking</h4>
+            <p class="section-text">
+              We offer best insurance plans option looking at the requirement of client with best efforts.
+            </p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="./assets/images/StockBrokingBi.webp" width="63" height="65" alt="Alternate Text">
+            <h4 class="h3 contact-item-title">Stock Broking</h4>
+            <p class="section-text">
+              We offer best insurance plans option looking at the requirement of client with best efforts.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </section>
+
+    <!-- 
         - #Parners
       -->
 
-      <section class="skills container" id="skills">
+    <section class="skills container" id="skills">
 
-        <div class="skills-content section-content">
+      <div class="skills-content section-content">
 
-          <p class="section-subtitle">Partners</p>
+        <p class="section-subtitle">Partners</p>
 
-          <h2 class="h3 section-title">Our Partners</h2>
+        <h2 class="h3 section-title">Our Partners</h2>
 
-          <p class="section-text">
-            For now we had a limited range of partners with there best expertise about investment and offers too.
-            With their expertise and in-depth knowledge of the market, we strive to provide you with tailored investment
-            solutions that align with your financial goals.
+        <p class="section-text">
+          For now we had a limited range of partners with there best expertise about investment and offers too.
+          With their expertise and in-depth knowledge of the market, we strive to provide you with tailored investment
+          solutions that align with your financial goals.
 
-          </p>
+        </p>
 
-          <div class="skills-toggle" data-toggle-box>
-            <button class="toggle-btn active">Fund</button>
+        <div class="skills-toggle" data-toggle-box>
+          <button class="toggle-btn active">Fund</button>
+        </div>
+
+      </div>
+
+      <div class="skills-box" data-skills-box>
+
+        <ul class="skills-list">
+
+          <li>
+            <div class="skill-card">
+              <div class="tooltip">HTML5</div>
+
+              <div class="card-icon">
+                <img src="./assets/images/html5.png" alt="HTML5 logo">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="skill-card">
+              <div class="tooltip">CSS3</div>
+
+              <div class="card-icon">
+                <img src="./assets/images/css3.png" alt="CSS3 logo">
+              </div>
+            </div>
+          </li>
+
+
+
+          <li>
+            <div class="skill-card">
+              <div class="tooltip">Bootstrap</div>
+
+              <div class="card-icon">
+                <img src="./assets/images/bootstrap.png" alt="Bootstrap logo">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="skill-card">
+              <div class="tooltip">Angular</div>
+
+              <div class="card-icon">
+                <img src="./assets/images/angular.png" alt="Angular logo">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="skill-card">
+              <div class="tooltip">React</div>
+
+              <div class="card-icon">
+                <img src="./assets/images/react.png" alt="React logo">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="skill-card">
+              <div class="tooltip">Vue</div>
+
+              <div class="card-icon">
+                <img src="./assets/images/vue.png" alt="Vue logo">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="skill-card">
+              <div class="tooltip">Firebase</div>
+
+              <div class="card-icon">
+                <img src="./assets/images/firebase.png" alt="Firebase logo">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="skill-card">
+              <div class="tooltip">PugJs</div>
+
+              <div class="card-icon">
+                <img src="./assets/images/pugjs.png" alt="PugJs logo">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="skill-card">
+              <div class="tooltip">SASS</div>
+
+              <div class="card-icon">
+                <img src="./assets/images/sass.png" alt="SASS logo">
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+    <!--contact us-->
+    <section class="contact container" id="contact">
+
+
+
+
+
+      <form action="" class="contact-form">
+        <h2 class="h3 section-title" style="text-align: center;">Car Insurance</h2>
+
+        <div class="form-wrapper">
+
+          <label for="name" class="form-label">Name</label>
+
+          <div class="input-wrapper">
+
+            <input type="text" name="name" id="name" required placeholder="e.g John Doe" class="input-field">
+
+            <ion-icon name="person-circle"></ion-icon>
+
           </div>
 
         </div>
 
-        <div class="skills-box" data-skills-box>
+        <div class="form-wrapper">
 
-          <ul class="skills-list">
+          <label for="name" class="form-label">Insurance Type</label>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">HTML5</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/html5.png" alt="HTML5 logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">CSS3</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/css3.png" alt="CSS3 logo">
-                </div>
-              </div>
-            </li>
+          <div class="input-wrapper">
 
 
+            <select name="Insurance_Type" id="" class="input-field">
+              <option value="insurance">Car</option>
+              <option value="insurance">bike</option>
+              <option value="insurance">motor</option>
+              <option value="insurance">home</option>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Bootstrap</div>
+            </select>
 
-                <div class="card-icon">
-                  <img src="./assets/images/bootstrap.png" alt="Bootstrap logo">
-                </div>
-              </div>
-            </li>
+            <ion-icon name="cash-outline"></ion-icon>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Angular</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/angular.png" alt="Angular logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">React</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/react.png" alt="React logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Vue</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/vue.png" alt="Vue logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Firebase</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/firebase.png" alt="Firebase logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">PugJs</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/pugjs.png" alt="PugJs logo">
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">SASS</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/sass.png" alt="SASS logo">
-                </div>
-              </div>
-            </li>
-
-          </ul>
+          </div>
 
         </div>
 
-      </section>
+        <div class="form-wrapper">
 
-      <!--contact us-->
-      <section class="contact container" id="contact">
+          <label for="email" class="form-label">Email</label>
 
-        
+          <div class="input-wrapper">
 
-        
+            <input type="email" name="email" id="email" required placeholder="e.g johndoe@mail.com" class="input-field">
 
-        <form action="" class="contact-form">
-            <h2 class="h3 section-title" style="text-align: center;">Car Insurance</h2>
-
-          <div class="form-wrapper">
-
-            <label for="name" class="form-label">Name</label>
-
-            <div class="input-wrapper">
-
-              <input type="text" name="name" id="name" required placeholder="e.g John Doe" class="input-field">
-
-              <ion-icon name="person-circle"></ion-icon>
-
-            </div>
+            <ion-icon name="mail"></ion-icon>
 
           </div>
 
-          <div class="form-wrapper">
+        </div>
 
-            <label for="name" class="form-label">Insurance Type</label>
+        <div class="form-wrapper">
 
-            <div class="input-wrapper">
+          <label for="phone" class="form-label">Phone</label>
 
-             
-              <select name="Insurance_Type" id=""class="input-field">
-                <option value="insurance">Car</option>
-                <option value="insurance">bike</option>
-                <option value="insurance">motor</option>
-                <option value="insurance">home</option>
+          <div class="input-wrapper">
 
-              </select>
+            <input type="tel" name="phone" id="phone" required placeholder="Phone Number" class="input-field">
 
-              <ion-icon name="cash-outline"></ion-icon>
-
-            </div>
+            <ion-icon name="call"></ion-icon>
 
           </div>
 
-          <div class="form-wrapper">
+        </div>
 
-            <label for="email" class="form-label">Email</label>
+        <div class="form-wrapper">
 
-            <div class="input-wrapper">
+          <label for="message" class="form-label">Message</label>
 
-              <input type="email" name="email" id="email" required placeholder="e.g johndoe@mail.com"
-                class="input-field">
+          <div class="input-wrapper">
 
-              <ion-icon name="mail"></ion-icon>
+            <textarea name="message" id="message" required placeholder="Write message..."
+              class="input-field"></textarea>
 
-            </div>
-
-          </div>
-
-          <div class="form-wrapper">
-
-            <label for="phone" class="form-label">Phone</label>
-
-            <div class="input-wrapper">
-
-              <input type="tel" name="phone" id="phone" required placeholder="Phone Number" class="input-field">
-
-              <ion-icon name="call"></ion-icon>
-
-            </div>
+            <ion-icon name="chatbubbles"></ion-icon>
 
           </div>
 
-          <div class="form-wrapper">
+        </div>
 
-            <label for="message" class="form-label">Message</label>
+        <button type="submit" class="btn btn-primary">Send</button>
 
-            <div class="input-wrapper">
+      </form>
 
-              <textarea name="message" id="message" required placeholder="Write message..."
-                class="input-field"></textarea>
-
-              <ion-icon name="chatbubbles"></ion-icon>
-
-            </div>
-
-          </div>
-
-          <button type="submit" class="btn btn-primary">Send</button>
-
-        </form>
-
-      </section>
-    </main>
+    </section>
+  </main>
 
 
 
-    <!-- 
+  <!-- 
     - #FOOTER
   -->
 
-    <footer class="footer">
-        <div class="container">
+  <footer class="footer">
+    <div class="container">
 
-            <p class="h1 logo">
-                <a href="#">
-                    MY CASHFLOW<span>.</span>
-                </a>
-            </p>
+      <p class="h1 logo">
+        <a href="#">
+          MY CASHFLOW<span>.</span>
+        </a>
+      </p>
 
-            <p class="copyright">
-                &copy; 2023. All rights reserved
-            </p>
+      <p class="copyright">
+        &copy; 2023. All rights reserved
+      </p>
 
-        </div>
-    </footer>
-
-
+    </div>
+  </footer>
 
 
 
-    <!-- 
+
+
+  <!-- 
     - #GO TO TOP
   -->
 
-    <a href="#top" class="go-top" data-go-top title="Go to Top">
-        <ion-icon name="arrow-up"></ion-icon>
-    </a>
+  <a href="#top" class="go-top" data-go-top title="Go to Top">
+    <ion-icon name="arrow-up"></ion-icon>
+  </a>
 
 
 
 
 
-    <!-- 
+  <!-- 
     - custom js link
   -->
-    <script src="../../assets/js/script.js"></script>
+  <script src="../../assets/js/script.js"></script>
 
-    <!-- 
+  <!-- 
     - ionicon link
   -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 

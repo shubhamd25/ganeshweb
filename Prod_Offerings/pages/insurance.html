@@ -33,50 +33,75 @@
 
     /* Create four equal columns that floats next to each other */
     .grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  gap: 20px;
- 
-  padding: 10px;
-}
-.image{
-width:80px;
-height: 70px;
- border-radius: 50%;
- border:1px black;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      gap: 20px;
+      justify-content: flex-start;
+      padding: 10px;
 
-}
-
-.grid-container > div:hover img {
-  transform: scale(1.1); /* Increase size on hover */
-}
-.grid-container > div {
-  background-color: transparent;
-  border: none;
-  text-align: center;
-  font-size: 30px;
-  
-}
-.grid-fit{
-      width: 60%;
-    /* height: 40vh; */
-    position: relative;
-    top: 9rem;
-    left: 3rem;
     }
 
-/* Media query for mobile devices */
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: auto auto;
-    gap: 5px;
-    padding: 5px;
-  }
-  .grid-container > div {
-    font-size: 20px;
-   
-  }
-}
+    .image {
+      width: 40px !important;
+      height: 40px !important;
+      border-radius: 50%;
+      border: 2px solid white;
+      padding: 10px;
+      color: hsl(24, 74%, 58%);
+
+
+    }
+
+
+    .grid-container>div :hover {
+      background-color: rgb(121, 166, 250);
+      border-radius: 50%;
+      padding: 0px;
+    }
+
+    .grid-container>div {
+      background-color: transparent;
+      border: none;
+      text-align: center;
+      font-size: 30px;
+
+    }
+
+    .grid-fit {
+      width: 60%;
+      /* height: 40vh; */
+      position: relative;
+      top: 17rem;
+      left: 8rem;
+    }
+
+    /* Media query for mobile devices */
+    @media (max-width: 425px) {
+      .grid-container {
+        grid-template-columns: auto auto;
+        gap: 20px;
+        padding: 5px;
+        position: relative;
+        top: -12rem;
+        left: -3rem;
+      }
+
+      .grid-container>div {
+        font-size: 20px;
+
+      }
+      .image {
+      width: 30px !important;
+      height: 30px !important;
+      border-radius: 50%;
+      border: 2px solid white;
+      padding: 10px;
+      color: hsl(24, 74%, 58%);
+    }
+    .grid-left{
+      margin-left: 56px;
+    }
+    }
   </style>
 </head>
 
@@ -150,21 +175,85 @@ height: 70px;
 
 
         <div class="grid-container">
-          <div><img src="../pages/img/shm.png" class="image"></div>
-          <div><img src="../pages/img/shm.png" class="image"></div>
-          <div><img src="../pages/img/shm.png" class="image"></div>  
-          <div><img src="../pages/img/shm.png" class="image"></div>
-          <div><img src="../pages/img/shm.png" class="image"></div>
-          <div><img src="../pages/img/shm.png" class="image"></div>
-          <div><img src="../pages/img/shm.png" class="image"></div>
-          <div><img src="../pages/img/shm.png" class="image"></div>
+          <div>
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 10px;">
+              <div>
+                <ion-icon name="logo-twitter" class="image"></ion-icon>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="grid-left">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 10px;">
+              <div>
+                <ion-icon name="logo-twitter" class="image"></ion-icon>
+              </div>
+            </div>
+
+          </div>
+
+          <div>
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 10px;">
+              <div>
+                <ion-icon name="logo-twitter" class="image"></ion-icon>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="grid-left">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 10px;">
+              <div>
+                <ion-icon name="logo-twitter" class="image"></ion-icon>
+              </div>
+            </div>
+
+          </div>
+
+          <div>
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 10px;">
+              <div>
+                <ion-icon name="logo-twitter" class="image"></ion-icon>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="grid-left">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 10px;">
+              <div>
+                <ion-icon name="logo-twitter" class="image"></ion-icon>
+              </div>
+            </div>
+
+          </div>
+
+          <div>
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 10px;">
+              <div>
+                <ion-icon name="logo-twitter" class="image"></ion-icon>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="grid-left">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 10px;">
+              <div>
+                <ion-icon name="logo-twitter" class="image"></ion-icon>
+              </div>
+            </div>
+
+          </div>
+
         </div>
 
       </div>
     </div>
 
     <!--advantages-->
-    <section class="project container" id="portfolio">
+    <section class="project container" id="portfolio" style="padding-block:40px;">
 
 
 

@@ -22,6 +22,8 @@
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
     rel="stylesheet">
@@ -101,53 +103,54 @@
 
       <section class="hero" id="home">
 
-        <figure class="hero-banner">
-
-          <picture>
-            <source srcset="./assets/images/hero-banner.png" media="(min-width: 768px)">
-            <source srcset="./assets/images/hero-banner-md.png" media="(min-width: 500px)">
-            <img src="./assets/images/hero-banner-sm.png" alt="A man in a blue shirt with a happy expression"
-              class="w-100">
-          </picture>
-
-        </figure>
-
-        <div class="hero-content">
-
-          <h2 class="h2 hero-title">We Design & Build Creative Products</h2>
-
-          <a href="#contact" class="btn btn-primary">Get in touch</a>
-
+        <div class="slider">
+          <div class="slide current">
+            <div class="content">
+              <h1>Slide One</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quidem, architecto eos adipisci maxime
+                aperiam!</p>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="content">
+              <h1>Slide Two</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quidem, architecto eos adipisci maxime
+                aperiam!</p>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="content">
+              <h1>Slide Three</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quidem, architecto eos adipisci maxime
+                aperiam!</p>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="content">
+              <h1>Slide Four</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quidem, architecto eos adipisci maxime
+                aperiam!</p>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="content">
+              <h1>Slide Five</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quidem, architecto eos adipisci maxime
+                aperiam!</p>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="content">
+              <h1>Slide Six</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quidem, architecto eos adipisci maxime
+                aperiam!</p>
+            </div>
+          </div>
         </div>
-
-        <ul class="hero-social-list">
-
-          <li>
-            <a href="#" class="hero-social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-
-              <div class="tooltip">Facebook</div>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="hero-social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-
-              <div class="tooltip">Twitter</div>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="hero-social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-
-              <div class="tooltip">Linkedin</div>
-            </a>
-          </li>
-
-        </ul>
-
+        <div class="buttons">
+          <button id="prev"><i class="fas fa-arrow-left"></i></button>
+          <button id="next"><i class="fas fa-arrow-right"></i></button>
+        </div>
         <a href="#stats" class="scroll-down">Scroll</a>
 
       </section>

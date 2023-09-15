@@ -1287,7 +1287,7 @@ textarea.input-field {
     display: block;
     position: absolute;
     bottom: 92px;
-    left: -30px;
+    left: 2rem;
   }
 
   .hero-social-list::after {
@@ -1330,7 +1330,7 @@ textarea.input-field {
     display: block;
     position: absolute;
     bottom: 80px;
-    right: -30px;
+    right: 2rem;
     color: var(--color-secondary);
     font-size: 1.125rem;
     text-transform: uppercase;

@@ -19,60 +19,69 @@
     - #HEADER
   -->
 
-    <header class="header" data-header>
-        <div class="container">
+  <header class="header" data-header>
+    <div class="container">
 
-            <h1 class="h1 logo">
-                <a href="#">MYCASHFLOW<span>.</span></a>
-            </h1>
+      <h1 class="h1 logo">
+        <a href="#">MYCASHFLOW<span>.</span></a>
+      </h1>
 
-            <div class="navbar-actions">
+      <div class="navbar-actions">
 
-                <div class="btn-group">
+        <div class="btn-group" style="height: 1rem !important;">
 
-                    <button class="btn btn-primary" style="padding: 7px 12px;">Login</button>
-                </div>
-
-                <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
-                    <span class="icon"></span>
-                </button>
-
-            </div>
-
-            <button class="nav-toggle-btn" aria-label="Toggle Menu" title="Toggle Menu" data-nav-toggle-btn>
-                <span class="one"></span>
-                <span class="two"></span>
-                <span class="three"></span>
-            </button>
-
-            <nav class="navbar" data-navbar>
-                <ul class="navbar-list">
-
-                    <li>
-                        <a href="../index.html" class="navbar-link">Home.</a>
-                    </li>
-
-                    <li>
-                        <a href="#contact" class="navbar-link">About.</a>
-                    </li>
-
-                    <li>
-                        <a href="#portfolio" class="navbar-link">Product Offering.</a>
-                    </li>
-
-                    <li>
-                        <a href="#portfolio" class="navbar-link">Calculators.</a>
-                    </li>
-
-                    <li>
-                        <a href="../index - Copy.html" class="navbar-link">Blog.</a>
-                    </li>
-
-                </ul>
-            </nav>
-
+          <button class="btn btn-primary" style="padding: 5px 28px;">Login</button>
         </div>
-    </header>
+
+        <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
+          <span class="icon"></span>
+        </button>
+
+      </div>
+
+      <button class="nav-toggle-btn" aria-label="Toggle Menu" title="Toggle Menu" data-nav-toggle-btn>
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+      </button>
+
+      <nav class="navbar" data-navbar id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <div class="dropdown">
+          <button class="dropbtn">Dropdown
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+        <a href="#about">About</a>
+        
+    </div>
+    </nav>
+
+
+
+
+
+    <script>
+      var dropdown = document.querySelector('.dropdown');
+      var menu = dropdown.querySelector('.dropdown-menu');
+
+      function toggleMenu() {
+        menu.classList.toggle('show');
+      }
+
+      dropdown.addEventListener('click', toggleMenu);
+    </script>
+
+    </div>
+  </header>
+
 
     <main>
         <article class="container" style="

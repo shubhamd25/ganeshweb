@@ -35,9 +35,16 @@
     .grid-container {
       display: grid;
       grid-template-columns: auto auto auto auto;
-      gap: 20px;
+      gap: 2px 29px;
       justify-content: flex-start;
       padding: 10px;
+
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: auto;
+      text-align: center;
 
     }
 
@@ -53,13 +60,13 @@
     }
 
 
-    .grid-container>div :hover {
+    .grid-container .box :hover {
       background-color: rgb(121, 166, 250);
       border-radius: 50%;
       padding: 0px;
     }
 
-    .grid-container>div {
+    .grid-container .box {
       background-color: transparent;
       border: none;
       text-align: center;
@@ -83,14 +90,18 @@
     @media (max-width: 784px) {
       .grid-container {
         grid-template-columns: auto auto;
-        gap: 20px;
+        gap: 1px 6rem;
         padding: 5px;
         position: relative;
         top: -10rem;
-        left: -4rem;
+        left: -2rem;
       }
 
-      .grid-container>div {
+      .grid-container .grid{
+        grid-template-columns: auto;
+      }
+
+      .grid-container .box {
         font-size: 20px;
 
       }
@@ -130,9 +141,9 @@
 
       <div class="navbar-actions">
 
-        <div class="btn-group">
+        <div class="btn-group" style="height: 1rem !important;">
 
-          <button class="btn btn-primary" style="padding: 7px 12px;">Login</button>
+          <button class="btn btn-primary" style="padding: 5px 28px;">Login</button>
         </div>
 
         <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
@@ -147,34 +158,43 @@
         <span class="three"></span>
       </button>
 
-      <nav class="navbar" data-navbar>
-        <ul class="navbar-list">
+      <nav class="navbar" data-navbar id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <div class="dropdown">
+          <button class="dropbtn">Dropdown
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+        <a href="#about">About</a>
 
-          <li>
-            <a href="#home" class="navbar-link">Home.</a>
-          </li>
+    </div>
+    </nav>
 
-          <li>
-            <a href="#contact" class="navbar-link">About.</a>
-          </li>
 
-          <li>
-            <a href="./Prod_Offerings/index.html" class="navbar-link">Product Offering.</a>
-          </li>
 
-          <li>
-            <a href="#portfolio" class="navbar-link">Calculators.</a>
-          </li>
 
-          <li>
-            <a href="#contact" class="navbar-link">Blog.</a>
-          </li>
 
-        </ul>
-      </nav>
+    <script>
+      var dropdown = document.querySelector('.dropdown');
+      var menu = dropdown.querySelector('.dropdown-menu');
+
+      function toggleMenu() {
+        menu.classList.toggle('show');
+      }
+
+      dropdown.addEventListener('click', toggleMenu);
+    </script>
 
     </div>
   </header>
+
 
   <main>
     <!--main image-->
@@ -194,78 +214,139 @@
 
         <div class="grid-container">
 
-          <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;margin-right: 12px;"
-            onclick="changeTxt('Critical Illness','text','Insurance_Type')">
-            <a href="#contact">
-              <div>
-                <ion-icon name="medkit-outline" class="image"></ion-icon>
+          <div class="grid-container grid">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
+              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
+              <a href="#contact" class="box">
+                <div>
+                  <ion-icon name="medkit-outline" class="image"></ion-icon>
 
-              </div>
-            </a>
-          </div>
-          <div class="grid-left" style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;margin-right: 12px;"
-            onclick="changeTxt('Pesrsonal Accident','text','Insurance_Type')">
-            <a href="#contact">
-              <div>
-                <ion-icon name="bed-outline" class="image"></ion-icon>
+                </div>
+              </a>
+            </div>
+            <div style="text-align: center;">
+              insurance
+            </div>
 
-              </div>
-            </a>
           </div>
-          <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;margin-right: 12px;"
-            onclick="changeTxt('Car Insurance','text','Insurance_Type')">
-            <a href="#contact">
-              <div>
-                <ion-icon name="accessibility-outline" class="image"></ion-icon>
 
-              </div>
-            </a>
-          </div>
-          <div class="grid-left" style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;margin-right: 12px;"
-            onclick="changeTxt('Two Wheeler Insurance','text','Insurance_Type')">
-            <a href="#contact">
-              <div>
-                <ion-icon name="car-sport-outline" class="image"></ion-icon>
+          <div class="grid-container grid">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
+              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
+              <a href="#contact" class="box">
+                <div>
+                  <ion-icon name="medkit-outline" class="image"></ion-icon>
 
-              </div>
-            </a>
-          </div>
-          <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;margin-right: 12px;"
-            onclick="changeTxt('Travel Insurance','text','Insurance_Type')">
-            <a href="#contact">
-              <div>
-                <ion-icon name="bicycle-sharp" class="image"></ion-icon>
+                </div>
+              </a>
+            </div>
+            <div style="text-align: center;">
+              insurance
+            </div>
 
-              </div>
-            </a>
           </div>
-          <div class="grid-left" style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;margin-right: 12px;"
-            onclick="changeTxt('Term Life Insurance','text','Insurance_Type')">
-            <a href="#contact">
-              <div>
-                <ion-icon name="rocket-outline" class="image"></ion-icon>
 
-              </div>
-            </a>
-          </div>
-          <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;margin-right: 12px;"
-            onclick="changeTxt('Investment Plan Insurance','text','Insurance_Type')">
-            <a href="#contact">
-              <div>
-                <ion-icon name="people-outline" class="image"></ion-icon>
+          <div class="grid-container grid">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
+              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
+              <a href="#contact" class="box">
+                <div>
+                  <ion-icon name="medkit-outline" class="image"></ion-icon>
 
-              </div>
-            </a>
-          </div>
-          <div class="grid-left" style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;margin-right: 12px;"
-            onclick="changeTxt('Health Insurance','text','Insurance_Type')">
-            <a href="#contact">
-              <div>
-                <ion-icon name="cash-outline" class="image"></ion-icon>
+                </div>
+              </a>
+            </div>
+            <div style="text-align: center;">
+              insurance
+            </div>
 
-              </div>
-            </a>
           </div>
+
+          <div class="grid-container grid">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
+              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
+              <a href="#contact" class="box">
+                <div>
+                  <ion-icon name="medkit-outline" class="image"></ion-icon>
+
+                </div>
+              </a>
+            </div>
+            <div style="text-align: center;">
+              insurance
+            </div>
+
+          </div>
+
+          <div class="grid-container grid">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
+              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
+              <a href="#contact" class="box">
+                <div>
+                  <ion-icon name="medkit-outline" class="image"></ion-icon>
+
+                </div>
+              </a>
+            </div>
+            <div style="text-align: center;">
+              insurance
+            </div>
+
+          </div>
+
+          <div class="grid-container grid">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
+              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
+              <a href="#contact" class="box">
+                <div>
+                  <ion-icon name="medkit-outline" class="image"></ion-icon>
+
+                </div>
+              </a>
+            </div>
+            <div style="text-align: center;">
+              insurance
+            </div>
+
+          </div>
+
+          <div class="grid-container grid">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
+              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
+              <a href="#contact" class="box">
+                <div>
+                  <ion-icon name="medkit-outline" class="image"></ion-icon>
+
+                </div>
+              </a>
+            </div>
+            <div style="text-align: center;">
+              insurance
+            </div>
+
+          </div>
+
+          <div class="grid-container grid">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
+              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
+              <a href="#contact" class="box">
+                <div>
+                  <ion-icon name="medkit-outline" class="image"></ion-icon>
+
+                </div>
+              </a>
+            </div>
+            <div style="text-align: center;">
+              insurance
+            </div>
+
+          </div>
+
+
+          
+
+
+
 
 
         </div>
@@ -467,7 +548,7 @@
       <div class="project-content section-content">
         <p class="section-subtitle">About Us</p>
 
-          <h2 class="h3 section-title">Testimonials</h2>
+        <h2 class="h3 section-title">Testimonials</h2>
       </div>
 
       <div class="row">
@@ -526,8 +607,8 @@
 
 
     <!--contact us-->
-    <div id="contact" >
-      <section class="contact container" >
+    <div id="contact">
+      <section class="contact container">
         <form action="" class="contact-form">
           <h2 class="h3 section-title" style="text-align: center;" id="text">Insurance</h2>
 
@@ -609,15 +690,17 @@
 
         </form>
         <style>
-          @media (min-width : 900px){
-            .response{
-            height: fit-content;position: relative;top: 40px;
-            margin-top: 0px !important;
+          @media (min-width : 900px) {
+            .response {
+              height: fit-content;
+              position: relative;
+              top: 40px;
+              margin-top: 0px !important;
             }
           }
         </style>
 
-        <form action="" class="contact-form response" style="margin-top: 20px;" >
+        <form action="" class="contact-form response" style="margin-top: 20px;">
 
           <h2 class="h3 section-title" style="text-align: center;" id="text">Contact Us</h2>
 
@@ -682,11 +765,11 @@
           <button type="submit" class="btn btn-primary">Send</button>
 
         </form>
-        
+
       </section>
-      
+
     </div>
-    
+
   </main>
 
 

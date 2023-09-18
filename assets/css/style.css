@@ -1150,8 +1150,8 @@ main {
 
 .contact-social-link {
   position: relative;
-  background: var(--color-primary);
-  color: var(--bg-primary);
+  background: var(--bg-primary);
+  color: var(--color-primary);
   width: 35px;
   height: 35px;
   display: grid;
@@ -2138,25 +2138,29 @@ textarea.input-field {
 
 /* Background images */
 .slide:first-child {
-  background: url('../images/insurance.png') no-repeat center center/cover;
+  background: url('../images/Insurance.png') no-repeat center center/cover;
 }
 
 .slide:nth-child(2) {
-  background: url('../images/photo2.jpeg') no-repeat center center/cover;
+  background: url('../images/DreamHome.png') no-repeat center center/cover;
 }
 
 .slide:nth-child(3) {
-  background: url('../images/photo3.jpeg') no-repeat center center/cover;
+  background: url('../images/Marriage.png') no-repeat center center/cover;
 }
 
 .slide:nth-child(4) {
-  background: url('../images/photo4.jpeg') no-repeat center center/cover;
+  background: url('../images/onelogin.png') no-repeat center center/cover;
 }
 
 .slide:nth-child(5) {
-  background: url('../images/photo5.jpeg') no-repeat center center/cover;
+  background: url('../images/retirement.png') no-repeat center center/cover;
 }
 
 .slide:nth-child(6) {
-  background: url('../images/photo6.jpeg') no-repeat center center/cover;
+  background: url('../images/RealEstate.png') no-repeat center center/cover;
+}
+
+.slide:nth-child(7) {
+  background: url('../images/Vacation.png') no-repeat center center/cover;
 }

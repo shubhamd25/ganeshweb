@@ -2137,7 +2137,7 @@ textarea.input-field {
 }
 
 /* Background images */
-.slide:first-child {
+.slide:nth-child(1) {
   background: url('../images/Insurance1.png') no-repeat center center/cover;
 }
 

@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Cashflow</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="./styles.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Create four equal columns that floats next to each other */
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      gap: 2px 29px;
+      justify-content: flex-start;
+      padding: 10px;
+
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: auto;
+      text-align: center;
+      margin: 0px 0px -21px 0px;
+
+    }
+
+    .image {
+      width: 40px !important;
+      height: 40px !important;
+      border-radius: 50%;
+      border: 2px solid white;
+      padding: 10px;
+      color: hsl(24, 74%, 58%);
+
+
+    }
+
+
+    .grid-container .box :hover {
+      background-color: rgb(121, 166, 250);
+      border-radius: 50%;
+      padding: 0px;
+    }
+
+    .grid-container .box {
+      background-color: transparent;
+      border: none;
+      text-align: center;
+      font-size: 30px;
+
+    }
+
+    .grid-fit {
+      width: 60%;
+      /* height: 40vh; */
+      position: relative;
+      top: 10rem;
+      left: 8rem;
+    }
+
+    .project {
+      padding-block: 40px;
+    }
+    
+
+    /* Media query for mobile devices */
+    @media (max-width: 784px) {
+      .grid-container {
+        grid-template-columns: auto auto;
+        gap: 1px 5rem;
+        padding: 4px;
+        position: relative;
+        top: -9rem;
+        left: -1rem;
+        height: 18vh;
+      }
+
+      .grid-container .grid {
+        grid-template-columns: auto;
+      }
+
+      .grid-container .box {
+        font-size: 20px;
+
+      }
+
+      .image {
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 50%;
+        border: 2px solid white;
+        padding: 10px;
+        color: hsl(24, 74%, 58%);
+      }
+
+      .grid-left {
+        margin-left: 56px;
+      }
+
+      .project {
+        padding-block: 2px;
+      }
+
+      .grid-fit {
+        top: 25rem;
+        left: 7rem;
+      }
+    }
+
+    .h33 {
+      font-weight: 700;
+      font-size: 40px;
+      margin: 0px;
+      line-height: 1.6;
+      display: -webkit-box;
+      position: relative;
+      top: 8rem;
+      text-align: left;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: horizontal;
+      -webkit-line-break: after-white-space;
+      line-break: auto;
+      width: 60%;
+    }
+  </style>
+</head>
+
+<body id="top" class="light_theme">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <h1 class="h1 logo">
+        <a href="#">MYCASHFLOW<span>.</span></a>
+      </h1>
+
+      <div class="navbar-actions">
+
+        <div class="btn-group" style="height: 1rem !important;">
+
+          <button class="btn btn-primary" style="padding: 5px 28px;">Login</button>
+        </div>
+
+        <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
+          <span class="icon"></span>
+        </button>
+
+      </div>
+
+      <button class="nav-toggle-btn" aria-label="Toggle Menu" title="Toggle Menu" data-nav-toggle-btn>
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+      </button>
+
+      <nav class="navbar" data-navbar id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <div class="dropdown">
+          <button class="dropbtn">Dropdown
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+        <a href="#about">About</a>
+
+    </div>
+    </nav>
+
+
+
+
+
+    <script>
+      var dropdown = document.querySelector('.dropdown');
+      var menu = dropdown.querySelector('.dropdown-menu');
+
+      function toggleMenu() {
+        menu.classList.toggle('show');
+      }
+
+      dropdown.addEventListener('click', toggleMenu);
+    </script>
+
+    </div>
+  </header>
+
+
+  <main>
+    <!--main image-->
+    <div class="mainimg">
+      <div style="width: 80%;margin-right: auto;margin-left: auto;">
+        <h4 class="h33">Protect your future,buy insurance today for peace of mind</h4>
+      </div>
+      <div class="grid-fit">
+
+
+        <script type="text/javascript">
+          function changeTxt(t, o, name) {
+            var o = document.getElementById(o);
+            var name = document.getElementById(name);
+            o.innerHTML = t; //Will change the text within the H1 tag to whatever you supply in the first argument, 't'.
+            name.value = t;
+
+          }
+        </script>
+
+        <div class="grid-container">
+
+          <div class="grid-container grid">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
+              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
+              <a href="#contact" class="box">
+                <div>
+                  <ion-icon name="medkit-outline" class="image"></ion-icon>
+
+                </div>
+              </a>
+            </div>
+            <div style="text-align: center;">
+              <span>Insurance</span><span style="position: relative;top: -10px;">Insurance</span>
+            </div>
+
+          </div>
+
+          <div class="grid-container grid">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
+              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
+              <a href="#contact" class="box">
+                <div>
+                  <ion-icon name="medkit-outline" class="image"></ion-icon>
+
+                </div>
+              </a>
+            </div>
+            <div style="text-align: center;">
+              <span>Insurance</span><span style="position: relative;top: -10px;">Insurance</span>
+            </div>
+
+          </div>
+
+          <div class="grid-container grid">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
+              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
+              <a href="#contact" class="box">
+                <div>
+                  <ion-icon name="medkit-outline" class="image"></ion-icon>
+
+                </div>
+              </a>
+            </div>
+            <div style="text-align: center;">
+              <span>Insurance</span><span style="position: relative;top: -10px;">Insurance</span>
+            </div>
+
+          </div>
+
+          <div class="grid-container grid">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
+              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
+              <a href="#contact" class="box">
+                <div>
+                  <ion-icon name="medkit-outline" class="image"></ion-icon>
+
+                </div>
+              </a>
+            </div>
+            <div style="text-align: center;">
+              <span>Insurance</span><span style="position: relative;top: -10px;">Insurance</span>
+            </div>
+
+          </div>
+
+          <div class="grid-container grid">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
+              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
+              <a href="#contact" class="box">
+                <div>
+                  <ion-icon name="medkit-outline" class="image"></ion-icon>
+
+                </div>
+              </a>
+            </div>
+            <div style="text-align: center;">
+              <span>Insurance</span><span style="position: relative;top: -10px;">Insurance</span>
+            </div>
+
+          </div>
+
+          <div class="grid-container grid">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
+              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
+              <a href="#contact" class="box">
+                <div>
+                  <ion-icon name="medkit-outline" class="image"></ion-icon>
+
+                </div>
+              </a>
+            </div>
+            <div style="text-align: center;">
+              <span>Insurance</span><span style="position: relative;top: -10px;">Insurance</span>
+            </div>
+
+          </div>
+
+          <div class="grid-container grid">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
+              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
+              <a href="#contact" class="box">
+                <div>
+                  <ion-icon name="medkit-outline" class="image"></ion-icon>
+
+                </div>
+              </a>
+            </div>
+            <div style="text-align: center;">
+              <span>Insurance</span><span style="position: relative;top: -10px;">Insurance</span>
+            </div>
+
+          </div>
+
+          <div class="grid-container grid">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
+              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
+              <a href="#contact" class="box">
+                <div>
+                  <ion-icon name="medkit-outline" class="image"></ion-icon>
+
+                </div>
+              </a>
+            </div>
+            <div style="text-align: center;">
+              <span>Insurance</span><span style="position: relative;top: -10px;">Insurance</span>
+            </div>
+
+          </div>
+
+
+
+
+
+
+
+
+        </div>
+
+      </div>
+    </div>
+<br><br>
+    <!--advantages-->
+    <section class="project container" id="portfolio">
+
+
+
+     
+      <div class="project-content section-content">
+        <p class="section-subtitle">Advantages</p>
+
+        <h2 class="h3 section-title">My Cashflow Advantages</h2>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="../assets/images/StockBrokingBi.webp" width="63" height="65" alt="Alternate Text">
+            <h4 class="h3 contact-item-title">Plan Options</h4>
+            <p class="section-text">
+              We offer best insurance plans option looking at the requirement of client with best efforts.
+            </p>
+
+          </div>
+        </div>
+
+
+        <div class="column">
+          <div class="card">
+            <img src="./assets/images/StockBrokingBi.webp" width="63" height="65" alt="Alternate Text">
+            <h4 class="h3 contact-item-title">Stock Broking</h4>
+            <p class="section-text">
+              We offer best insurance plans option looking at the requirement of client with best efforts.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="column">
+          <div class="card">
+            <img src="./assets/images/StockBrokingBi.webp" width="63" height="65" alt="Alternate Text">
+            <h4 class="h3 contact-item-title">Stock Broking</h4>
+            <p class="section-text">
+              We offer best insurance plans option looking at the requirement of client with best efforts.
+            </p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="./assets/images/StockBrokingBi.webp" width="63" height="65" alt="Alternate Text">
+            <h4 class="h3 contact-item-title">Stock Broking</h4>
+            <p class="section-text">
+              We offer best insurance plans option looking at the requirement of client with best efforts.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </section>
+
+    <!-- 
+        - #Parners
+      -->
+
+    <section class="skills container" id="skills">
+
+      <div class="skills-content section-content">
+
+        <p class="section-subtitle">Partners</p>
+
+        <h2 class="h3 section-title">Our Partners</h2>
+
+        <p class="section-text">
+          For now we had a limited range of partners with there best expertise about investment and offers too.
+          With their expertise and in-depth knowledge of the market, we strive to provide you with tailored investment
+          solutions that align with your financial goals.
+
+        </p>
+
+        <div class="skills-toggle" data-toggle-box>
+          <button class="toggle-btn active">Fund</button>
+        </div>
+
+      </div>
+
+      <div class="skills-box" data-skills-box>
+
+        <ul class="skills-list">
+
+          <li>
+            <div class="skill-card">
+              <div class="tooltip">HTML5</div>
+
+              <div class="card-icon">
+                <img src="./assets/images/html5.png" alt="HTML5 logo">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="skill-card">
+              <div class="tooltip">CSS3</div>
+
+              <div class="card-icon">
+                <img src="./assets/images/css3.png" alt="CSS3 logo">
+              </div>
+            </div>
+          </li>
+
+
+
+          <li>
+            <div class="skill-card">
+              <div class="tooltip">Bootstrap</div>
+
+              <div class="card-icon">
+                <img src="./assets/images/bootstrap.png" alt="Bootstrap logo">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="skill-card">
+              <div class="tooltip">Angular</div>
+
+              <div class="card-icon">
+                <img src="./assets/images/angular.png" alt="Angular logo">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="skill-card">
+              <div class="tooltip">React</div>
+
+              <div class="card-icon">
+                <img src="./assets/images/react.png" alt="React logo">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="skill-card">
+              <div class="tooltip">Vue</div>
+
+              <div class="card-icon">
+                <img src="./assets/images/vue.png" alt="Vue logo">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="skill-card">
+              <div class="tooltip">Firebase</div>
+
+              <div class="card-icon">
+                <img src="./assets/images/firebase.png" alt="Firebase logo">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="skill-card">
+              <div class="tooltip">PugJs</div>
+
+              <div class="card-icon">
+                <img src="./assets/images/pugjs.png" alt="PugJs logo">
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="skill-card">
+              <div class="tooltip">SASS</div>
+
+              <div class="card-icon">
+                <img src="./assets/images/sass.png" alt="SASS logo">
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+    <!--advantages-->
+    <section class="project container" id="portfolio">
+
+
+
+      <div class="project-content section-content">
+        <p class="section-subtitle">About Us</p>
+
+        <h2 class="h3 section-title">Testimonials</h2>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <div class="card" style="text-align: center; background: none;">
+            <img src="../assets/images/StockBrokingBi.webp" width="63" height="65" alt="Alternate Text" style="margin-right: auto;
+            margin-left: auto;">
+            <h4 class="h3 contact-item-title">Plan Options</h4>
+            <p class="section-text" style="-webkit-line-clamp: unset; padding-top: 0px !important;">
+              We offer best insurance plans option looking at the requirement of client with best efforts.
+            </p>
+
+          </div>
+        </div>
+
+
+        <div class="column">
+          <div class="card" style="text-align: center; background: none;">
+            <img src="./assets/images/StockBrokingBi.webp" width="63" height="65" alt="Alternate Text" style="margin-right: auto;
+            margin-left: auto;">
+            <h4 class="h3 contact-item-title">Stock Broking</h4>
+            <p class="section-text" style="-webkit-line-clamp: unset; padding-top: 0px !important;">
+              We offer best insurance plans option looking at the requirement of client with best efforts.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="column">
+          <div class="card" style="text-align: center; background: none;">
+            <img src="./assets/images/StockBrokingBi.webp" width="63" height="65" alt="Alternate Text" style="margin-right: auto;
+            margin-left: auto;">
+            <h4 class="h3 contact-item-title">Stock Broking</h4>
+            <p class="section-text" style="-webkit-line-clamp: unset; padding-top: 0px !important;">
+              We offer best insurance plans option looking at the requirement of client with best efforts.
+            </p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card" style="text-align: center; background: none;">
+            <img src="./assets/images/StockBrokingBi.webp" width="63" height="65" alt="Alternate Text" style="margin-right: auto;
+            margin-left: auto;">
+            <h4 class="h3 contact-item-title">Stock Broking</h4>
+            <p class="section-text" style="-webkit-line-clamp: unset; padding-top: 0px !important;">
+              We offer best insurance plans option looking at the requirement of client with best efforts.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </section>
+
+
+    <!--contact us-->
+    <div id="contact">
+      <section class="contact container">
+        <form action="" class="contact-form">
+          <h2 class="h3 section-title" style="text-align: center;" id="text">Insurance</h2>
+
+          <div class="form-wrapper">
+
+            <label for="name" class="form-label">Name</label>
+
+            <div class="input-wrapper">
+
+              <input type="text" name="name" id="name" required placeholder="e.g John Doe" class="input-field">
+
+              <ion-icon name="person-circle"></ion-icon>
+
+            </div>
+
+          </div>
+
+          <div class="form-wrapper">
+
+            <label for="name" class="form-label">Insurance Type</label>
+
+            <div class="input-wrapper">
+
+
+              <input type="text" name="Insurance Type" id="Insurance_Type" class="input-field" value="not defined"
+                disabled>
+
+              <ion-icon name="cash-outline"></ion-icon>
+
+            </div>
+
+          </div>
+
+          <div class="form-wrapper">
+
+            <label for="email" class="form-label">Email</label>
+
+            <div class="input-wrapper">
+
+              <input type="email" name="email" id="email" required placeholder="e.g johndoe@mail.com"
+                class="input-field">
+
+              <ion-icon name="mail"></ion-icon>
+
+            </div>
+
+          </div>
+
+          <div class="form-wrapper">
+
+            <label for="phone" class="form-label">Phone</label>
+
+            <div class="input-wrapper">
+
+              <input type="tel" name="phone" id="phone" required placeholder="Phone Number" class="input-field">
+
+              <ion-icon name="call"></ion-icon>
+
+            </div>
+
+          </div>
+
+          <div class="form-wrapper">
+
+            <label for="message" class="form-label">Message</label>
+
+            <div class="input-wrapper">
+
+              <textarea name="message" id="message" required placeholder="Write message..."
+                class="input-field"></textarea>
+
+              <ion-icon name="chatbubbles"></ion-icon>
+
+            </div>
+
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send</button>
+
+        </form>
+        <style>
+          @media (min-width : 900px) {
+            .response {
+              height: fit-content;
+              position: relative;
+              top: 40px;
+              margin-top: 0px !important;
+            }
+          }
+        </style>
+
+        <form action="" class="contact-form response" style="margin-top: 20px;">
+
+          <h2 class="h3 section-title" style="text-align: center;" id="text">Contact Us</h2>
+
+          <div class="form-wrapper">
+
+            <label for="name" class="form-label">Name</label>
+
+            <div class="input-wrapper">
+
+              <input type="text" name="name" id="name" required placeholder="e.g John Doe" class="input-field">
+
+              <ion-icon name="person-circle"></ion-icon>
+
+            </div>
+
+          </div>
+
+          <div class="form-wrapper">
+
+            <label for="email" class="form-label">Email</label>
+
+            <div class="input-wrapper">
+
+              <input type="email" name="email" id="email" required placeholder="e.g johndoe@mail.com"
+                class="input-field">
+
+              <ion-icon name="mail"></ion-icon>
+
+            </div>
+
+          </div>
+
+          <div class="form-wrapper">
+
+            <label for="phone" class="form-label">Phone</label>
+
+            <div class="input-wrapper">
+
+              <input type="tel" name="phone" id="phone" required placeholder="Phone Number" class="input-field">
+
+              <ion-icon name="call"></ion-icon>
+
+            </div>
+
+          </div>
+
+          <div class="form-wrapper">
+
+            <label for="message" class="form-label">Message</label>
+
+            <div class="input-wrapper">
+
+              <textarea name="message" id="message" required placeholder="Write message..."
+                class="input-field"></textarea>
+
+              <ion-icon name="chatbubbles"></ion-icon>
+
+            </div>
+
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send</button>
+
+        </form>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <p class="h1 logo">
+        <a href="#">
+          MY CASHFLOW<span>.</span>
+        </a>
+      </p>
+
+      <p class="copyright">
+        &copy; 2023. All rights reserved
+      </p>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top title="Go to Top">
+    <ion-icon name="arrow-up"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="../../assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

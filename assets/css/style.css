@@ -2139,6 +2139,7 @@ textarea.input-field {
     bottom: -300px;
     left: 0;
     width: 100%;
+    padding: 2px;
   }
 
   .slide.current .content {

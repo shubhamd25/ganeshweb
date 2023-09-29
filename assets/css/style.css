@@ -2084,17 +2084,16 @@ textarea.input-field {
 
 .slide .content {
   position: absolute;
-  bottom: 70px;
+  bottom: 16px;
   left: -600px;
   opacity: 0;
   width: 600px;
   background-color: rgba(255, 255, 255, 0.8);
   color: #333;
-  padding: 35px;
+  padding: 10px;
 }
 
 .slide .content h1 {
-  margin-bottom: 10px;
   color: var(--raw-seinna);
 }
 
@@ -2149,31 +2148,45 @@ textarea.input-field {
 
 /* Background images */
 .slide:nth-child(1) {
-  background: url('../images/onelogin.png') no-repeat center center/cover;
+  background: url('../images/onelogin.png');
+  background-repeat: no-repeat;
+  background-size: 100% 73vh;
 }
 
 .slide:nth-child(2) {
-  background: url('../images/retirement.png') no-repeat center center/cover;
+  background: url('../images/retirement.png') ;
+   background-repeat: no-repeat;
+  background-size: 100% 73vh;
 }
 
 .slide:nth-child(3) {
-  background: url('../images/DreamHome.png') no-repeat center center/cover;
+  background: url('../images/DreamHome.png') ;
+   background-repeat: no-repeat;
+  background-size: 100% 73vh;
 }
 
 .slide:nth-child(4) {
-  background: url('../images/Insurance\(1600\ ×\ 900\ px\).png') no-repeat center center/cover;
+  background: url('../images/Insurance\(1600\ ×\ 900\ px\).png') ;
+   background-repeat: no-repeat;
+  background-size: 100% 73vh;
 }
 
 .slide:nth-child(5) {
-  background: url('../images/Marriage.png') no-repeat center center/cover;
+  background: url('../images/Marriage.png') ;
+   background-repeat: no-repeat;
+  background-size: 100% 73vh;
 }
 
 .slide:nth-child(6) {
-  background: url('../images/Vacation.png') no-repeat center center/cover;
+  background: url('../images/Vacation.png') ;
+   background-repeat: no-repeat;
+  background-size: 100% 73vh;
 }
 
 .slide:nth-child(7) {
-  background: url('../images/RealEsatae1600by900.png') no-repeat center center/cover;
+  background: url('../images/RealEsatae1600by900.png') ;
+   background-repeat: no-repeat;
+  background-size: 100% 73vh;
 }
 
 /* button customized*/

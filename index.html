@@ -39,7 +39,7 @@
     - #HEADER
   -->
 
-  <header class="header" data-header>
+  <header class="header" data-header style="padding-block: 10px; background: var(--bg-secondary);">
     <div class="container">
 
       <h1 class="h1 logo">
@@ -116,17 +116,27 @@
   </header>
 
 
+<style>
+  .space{
+    margin-top: 4.2rem;
+    height: 73vh;
+  }
+  @media (max-width:600px) {
+    .space{
+      margin-top: 3rem;
+    }
+  }
+</style>
 
 
-
-  <main>
+  <main >
     <article class="container">
 
       <!-- 
         - #slider
       -->
 
-      <section class="hero" id="home">
+      <section class="hero space" id="home">
 
         <div class="slider">
           <div class="slide current">

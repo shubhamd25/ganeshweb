@@ -1,104 +1,119 @@
-
 .mainimg {
-    padding-bottom: 20px;
-    background-image: url('../../assets/images/InsuranceProduc\(1600\ ×\ 700\ px\).png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 92vh;
-    
+  padding-bottom: 20px;
+  background-image: url('../../assets/images/InsuranceProduc\(1600\ ×\ 700\ px\).png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 92vh;
+
 }
 
 
 
 .container-div {
-    text-align: left;
-  }
-  .background-container {
-    background-image: url('img_avatar.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  
-  /* Create a two-column layout */
-  .row {
-    display: flex;
-    width: 100%;
-  }
-  
-  /* Define the left column with 50% width */
-  .left-column {
-    flex: 1;
-    width: 50%;
-  }
-  
-  /* Define the right column with 50% width */
-  .right-column {
-    flex: 1;
-    width: 50%;
-  }
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-     }
-  
-  th, td {
-    text-align: left;
-    padding: 8px;
-  }
-  img {
-    border-radius: 50%;
-  }
-  
-  tr:nth-child(even){background-color: transparent}
-  .container1 {
-    position: relative;
-    width: 50%;
-   
-  }
-  
-  .image {
-    display: block;
-    width: 90%;
-    height: auto;
-    border-radius: 50%;
+  text-align: left;
+}
 
-  }
-  
-  .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: transparent;
-    overflow: hidden;
-    width: 90%;
-    height: 0;
-    transition: .5s ease;
-  }
-  
-  .container1:hover .overlay {
-    height: 100%;
-  }
-  
-  .overlay img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-  }
+.background-container {
+  background-image: url('img_avatar.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
+/* Create a two-column layout */
+.row {
+  display: flex;
+  width: 100%;
+}
+
+/* Define the left column with 50% width */
+.left-column {
+  flex: 1;
+  width: 50%;
+}
+
+/* Define the right column with 50% width */
+.right-column {
+  flex: 1;
+  width: 50%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+img {
+  border-radius: 50%;
+}
+
+tr:nth-child(even) {
+  background-color: transparent
+}
+
+.container1 {
+  position: relative;
+  width: 50%;
+
+}
+
+.image {
+  display: block;
+  width: 90%;
+  height: auto;
+  border-radius: 50%;
+
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  overflow: hidden;
+  width: 90%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container1:hover .overlay {
+  height: 100%;
+}
+
+.overlay img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.card {
+  height: 23rem;
+  margin-right: 20px;
+}
+
+.project{
+  padding-block: 0rem !important;
+}
+
+@media (max-width : 700px) {
   .card {
-    background: none;
-    text-align: center;
-    margin-right: 20px;
+    height: 18rem;
   }
+}
 
-  .column img {
-    margin-bottom: 20px;
-    margin-right: auto;
-    margin-left: auto;
+.column img {
+  margin-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .column p {
@@ -108,9 +123,9 @@
 .project {
   margin-top: 1rem;
 }
-  
 
 
-.footer{
+
+.footer {
   margin-top: 2rem;
 }

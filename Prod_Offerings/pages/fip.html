@@ -34,7 +34,7 @@
     /* Create four equal columns that floats next to each other */
     .grid-container {
       display: grid;
-      grid-template-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto;
       gap: 2px 29px;
       justify-content: flex-start;
       padding: 10px;
@@ -162,7 +162,7 @@
     - #HEADER
   -->
 
-  <header class="header" data-header>
+  <header class="header" data-header style="background-color: var(--bg-primary);padding-block: 10px;">
     <div class="container">
 
       <h1 class="h1 logo">
@@ -358,45 +358,6 @@
 
           </div>
 
-          <div class="grid-container grid">
-            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
-              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
-              <a href="#contact" class="box">
-                <div>
-                  <ion-icon name="medkit-outline" class="image"></ion-icon>
-
-                </div>
-              </a>
-            </div>
-            <div style="text-align: center;color: antiquewhite;">
-              <span>Insurance</span><span style="position: relative;top: -10px;">Insurance</span>
-            </div>
-
-          </div>
-
-          <div class="grid-container grid">
-            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
-              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
-              <a href="#contact" class="box">
-                <div>
-                  <ion-icon name="medkit-outline" class="image"></ion-icon>
-
-                </div>
-              </a>
-            </div>
-            <div style="text-align: center;color: antiquewhite;">
-              <span>Insurance</span><span style="position: relative;top: -10px;">Insurance</span>
-            </div>
-
-          </div>
-
-
-
-
-
-
-
-
         </div>
 
       </div>
@@ -464,6 +425,68 @@
 
 
     </section>
+
+    <!-- 
+        - #STATS
+      -->
+
+      <section class="stats container" id="stats">
+        <ul class="stats-list">
+
+          <li>
+            <a href="#" class="stats-card">
+
+              <div class="card-icon">
+                <img src="./assets/images/Certify.png" alt="Badge icon"
+                  style="border-radius: 50%; width: 60px; height:60px; border: 2px solid orange;">
+              </div>
+
+              <h2 class="h2 card-title">
+                Certified <strong>AMFI and IRDA registered</strong>
+              </h2>
+
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="stats-card">
+
+              <div class="card-icon">
+                <img src="./assets/images/Growth.png" alt="Checkmark icon"
+                  style="border-radius: 50%; width: 60px; height:60px; border: 2px solid orange;">
+              </div>
+
+              <h2 class="h2 card-title">
+                50+ <strong> LIVE SIP under Management</strong>
+              </h2>
+
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="stats-card">
+
+              <div class="card-icon">
+                <img src="./assets/images/happyClient.png" alt="Peoples rating icon"
+                  style="border-radius: 50%; width: 60px; height:60px; border: 2px solid orange;">
+              </div>
+
+              <h2 class="h2 card-title">
+                100+ <strong>Happy Clients</strong>
+              </h2>
+
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+
+            </a>
+          </li>
+
+        </ul>
+      </section>
+
 
     <!-- 
         - #Parners
@@ -821,6 +844,24 @@
 
   </main>
 
+   <!-- disclaimer -->
+<div class="disclaimer">
+  <p>
+  <strong>  Universe Enterprise </strong>
+  <span></span>
+  Registration No. 2352300317895448
+  
+  F.No.202 P.N0.17 Chatrapati Apartment, Manish Nagar, Nagpur -440015
+  
+  Registration Details: AMFI Reg No.: ARN-                                            
+  
+  Disclaimer: Investment in securities market are subject to market risks, read all the related documents carefully before investing.
+  
+   
+  
+  Copyright © 2023 Universe Enterprise
+  </p>
+  </div>
 
 
   <!-- 

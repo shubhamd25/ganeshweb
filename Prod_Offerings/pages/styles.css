@@ -141,3 +141,9 @@ tr:nth-child(even) {
 .skills-box .row {
   padding-right: 20px;
 }
+
+.grid-container span{
+  font-size: small;
+  color: black;
+  font-weight: bold;
+}

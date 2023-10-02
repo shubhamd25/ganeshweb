@@ -133,3 +133,11 @@ tr:nth-child(even) {
 .card img {
   border: 2px solid var(--raw-seinna);
 }
+
+.skills-box .row .column img {
+  border-radius: 0%;
+}
+
+.skills-box .row {
+  padding-right: 20px;
+}

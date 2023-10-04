@@ -144,6 +144,6 @@ tr:nth-child(even) {
 
 .grid-container span{
   font-size: small;
-  color:  var(--raw-seinna);
+  color:  var(--raw-seinna) ;
   font-weight: bold;
 }

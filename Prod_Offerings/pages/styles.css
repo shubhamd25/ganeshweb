@@ -106,7 +106,7 @@ tr:nth-child(even) {
 
 @media (max-width : 700px) {
   .card {
-    height: 18rem;
+    height: 20rem;
   }
 }
 
@@ -118,6 +118,7 @@ tr:nth-child(even) {
 
 .column p {
   overflow: visible;
+  display: block;
 }
 
 .project {

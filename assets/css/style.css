@@ -2196,7 +2196,8 @@ textarea.input-field {
   font-size: 12px;
   font-weight: 600;
   padding: 1px 11px;
-  border-color: var(--raw-seinna);
+  border-color: var(--color-primary);
+  background-color: var(--raw-seinna);
   
 }
 .btn a{

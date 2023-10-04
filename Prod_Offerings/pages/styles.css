@@ -148,3 +148,9 @@ tr:nth-child(even) {
   color: white ;
   font-weight: bold;
 }
+
+@media (min-width:701px) {
+  .space2{
+    margin-top: 6rem;
+  }
+}

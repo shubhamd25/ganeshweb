@@ -34,7 +34,7 @@
     /* Create four equal columns that floats next to each other */
     .grid-container {
       display: grid;
-      grid-template-columns: auto auto auto;
+      grid-template-columns: auto auto auto auto;
       gap: 2px 29px;
       justify-content: flex-start;
       padding: 10px;
@@ -60,11 +60,20 @@
 
     }
 
+    .box {
+      text-decoration: none;
+    }
+
+    .box div img {
+      border-radius: 0%;
+      border: 2px solid hsl(24, 74%, 58%);
+    }
 
     .grid-container .box :hover {
-      background-color: rgb(121, 166, 250);
-      border-radius: 50%;
+      transform: scale(1.05);
+      border-radius: 0%;
       padding: 0px;
+      text-decoration: none;
     }
 
     .grid-container .box {
@@ -92,7 +101,7 @@
     @media (max-width: 784px) {
       .grid-container {
         grid-template-columns: auto auto;
-        gap: 1px 5rem;
+        gap: 2px 5rem;
         padding: 4px;
         position: relative;
         top: -9rem;
@@ -102,6 +111,7 @@
 
       .grid-container .grid {
         grid-template-columns: auto;
+        margin-bottom: 2px;
       }
 
       .grid-container .box {
@@ -112,7 +122,7 @@
       .image {
         width: 40px !important;
         height: 40px !important;
-        border-radius: 50%;
+        border-radius: 0%;
         border: 2px solid white;
         padding: 10px;
         color: hsl(24, 74%, 58%);
@@ -130,28 +140,45 @@
         top: 22rem;
         left: 7rem;
       }
-      .h33{
+
+      .h33 {
         width: unset !important;
         top: 3.6rem !important;
-        font-weight: 680 !important;
-      font-size: 30px !important;
+        left: 0rem !important;
+        font-weight: 600 !important;
+        font-size: 20px !important;
+        display: block;
+      }
+
+      .mainimg #divf {
+        width: 90% !important;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+
       }
     }
 
+    .mainimg #divf {
+      width: fit-content;
+      text-align: center;
+
+    }
+
     .h33 {
+      border-radius: 10px;
+      padding: 8px;
+      background-color: rgba(250, 235, 215, 0.726);
       font-weight: 700;
-      font-size: 40px;
+      font-size: 25px;
       margin: 0px;
       line-height: 1.6;
-      display: -webkit-box;
       position: relative;
       top: 7rem;
+      left: 9rem;
       text-align: left;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: horizontal;
-      -webkit-line-break: after-white-space;
-      line-break: auto;
-      width: 60%;
+
+
     }
   </style>
 </head>
@@ -244,9 +271,18 @@
 
   <main>
     <!--main image-->
-    <div class="mainimg" style="background-image: url(/assets/images/MutualFund_New.png);">
-      <div style="width: 80%;margin-right: auto;margin-left: auto;">
-        <h4 class="h33" style="color: antiquewhite;">Empower your financial goals with purpose-based investing</h4>
+    <div class="mainimg" style="background-image: url(./images/mutualImg/MutualFundNew1600by700.png);">
+      <div id="divf">
+        <div class="h33">
+          <div style="display: flex;"><span style="color: brown;"> Empower financial goals. Invest Now!</span>
+            <span style="color: green;"> Get
+              Insurance </span><span>
+          </div>
+          Today for Peace of Mind.</span>
+        </div>
+
+        </h4>
+
       </div>
       <div class="grid-fit">
 
@@ -264,97 +300,123 @@
         <div class="grid-container">
 
           <div class="grid-container grid">
-            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
-              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 0%;padding: 4px;"
+              onclick="changeTxt('Term Life','text','Insurance_Type')">
               <a href="#contact" class="box">
                 <div>
-                  <ion-icon name="medkit-outline" class="image"></ion-icon>
+                  <img src="./images/mutualImg/MutulFundSVJ.svg" alt="">
 
                 </div>
               </a>
             </div>
-            <div style="text-align: center;color: antiquewhite;">
-              <span>Insurance</span><span style="position: relative;top: -10px;">Insurance</span>
+            <div style="text-align: center;color: rgb(27, 27, 26);">
+              <span>Mutual Fund</span><span style="position: relative;top: -10px;">.</span>
+            </div>
+
+          </div>
+          <div class="grid-container grid">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 0%;padding: 4px;"
+              onclick="changeTxt('Health Insurance','text','Insurance_Type')">
+              <a href="#contact" class="box">
+                <div>
+                  <div>
+                    <img src="./images/mutualImg/SIPSVJ.svg" alt="">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div style="text-align: center; color:  var(--raw-seinna);">
+              <span>SIP</span><span style="position: relative;top: -10px;">.</span>
             </div>
 
           </div>
 
           <div class="grid-container grid">
-            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
-              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 0%;padding: 4px;"
+              onclick="changeTxt('Car Insurance','text','Insurance_Type')">
               <a href="#contact" class="box">
                 <div>
-                  <ion-icon name="medkit-outline" class="image"></ion-icon>
-
+                  <img src="./images/mutualImg/ELSSSVJ.svg" alt="">
                 </div>
               </a>
             </div>
-            <div style="text-align: center;color: antiquewhite;">
-              <span>Insurance</span><span style="position: relative;top: -10px;">Insurance</span>
+            <div style="text-align: center;color: aquamarine;">
+              <span>ELSS</span><span style="position: relative;top: -10px;">.</span>
             </div>
 
           </div>
 
           <div class="grid-container grid">
-            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
-              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 0%;padding: 4px;"
+              onclick="changeTxt('2 wheeler Insurance','text','Insurance_Type')">
               <a href="#contact" class="box">
                 <div>
-                  <ion-icon name="medkit-outline" class="image"></ion-icon>
-
+                  <img src="./images/mutualImg/SWPSVJ.svg" alt="">
                 </div>
               </a>
             </div>
-            <div style="text-align: center;color: antiquewhite;">
-              <span>Insurance</span><span style="position: relative;top: -10px;">Insurance</span>
+            <div style="text-align: center;color: rgb(5, 5, 5);">
+              <span>SWP/STP</span><span style="position: relative;top: -10px;">.</span>
             </div>
 
           </div>
 
           <div class="grid-container grid">
-            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
-              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 0%;padding: 4px;"
+              onclick="changeTxt('Travel Insurance','text','Insurance_Type')">
               <a href="#contact" class="box">
                 <div>
-                  <ion-icon name="medkit-outline" class="image"></ion-icon>
-
+                  <img src="./images/mutualImg/EquityFundSVJ.svg" alt="">
                 </div>
               </a>
             </div>
-            <div style="text-align: center;color: antiquewhite;">
-              <span>Insurance</span><span style="position: relative;top: -10px;">Insurance</span>
+            <div style="text-align: center;color: rgb(12, 12, 11);">
+              <span>Equity</span><span style="position: relative;top: -10px;">Fund</span>
             </div>
 
           </div>
 
           <div class="grid-container grid">
-            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
-              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 0%;padding: 4px;"
+              onclick="changeTxt('Bussiness Insurance','text','Insurance_Type')">
               <a href="#contact" class="box">
                 <div>
-                  <ion-icon name="medkit-outline" class="image"></ion-icon>
-
+                  <img src="./images/mutualImg/DebtFundSVJ.svg" alt="">
                 </div>
               </a>
             </div>
-            <div style="text-align: center;color: antiquewhite;">
-              <span>Insurance</span><span style="position: relative;top: -10px;">Insurance</span>
+            <div style="text-align: center;color: rgb(17, 17, 16);">
+              <span>Debt/</span><span style="position: relative;top: -10px;">Liquid fund</span>
             </div>
 
           </div>
 
           <div class="grid-container grid">
-            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 50%;padding: 4px;"
-              onclick="changeTxt('Critical Illness','text','Insurance_Type')">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 0%;padding: 4px;"
+              onclick="changeTxt('Invest Plan Insurance','text','Insurance_Type')">
               <a href="#contact" class="box">
                 <div>
-                  <ion-icon name="medkit-outline" class="image"></ion-icon>
-
+                  <img src="./images/mutualImg/PortfolioBalancing.svg" alt="">
                 </div>
               </a>
             </div>
-            <div style="text-align: center;color: antiquewhite;">
-              <span>Insurance</span><span style="position: relative;top: -10px;">Insurance</span>
+            <div style="text-align: center;color: rgb(29, 28, 27);">
+              <span>Portfolio</span><span style="position: relative;top: -10px;">Balancing</span>
+            </div>
+
+          </div>
+
+          <div class="grid-container grid">
+            <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 0%;padding: 4px;"
+              onclick="changeTxt('Property Insurance','text','Insurance_Type')">
+              <a href="#contact" class="box">
+                <div>
+                  <img src="./images/mutualImg/GaolBasedSVJ.svg" alt="">
+                </div>
+              </a>
+            </div>
+            <div style="text-align: center;color: rgb(26, 25, 25);">
+              <span>Goal Based</span><span style="position: relative;top: -10px;">Planning</span>
             </div>
 
           </div>
@@ -370,67 +432,68 @@
 
       </div>
     </div>
-    <br><br>
+
+
     <!-- 
         - #STATS
       -->
 
-      <section class="stats container" id="stats">
-        <ul class="stats-list">
+    <section class="stats container" id="stats">
+      <ul class="stats-list">
 
-          <li>
-            <a href="#" class="stats-card">
+        <li>
+          <a class="stats-card">
 
-              <div class="card-icon">
-                <img src="/assets/images/Certify.png" alt="Badge icon"
-                  style="border-radius: 50%; width: 60px; height:60px; border: 2px solid orange;">
-              </div>
+            <div class="card-icon">
+              <img src="./images/mutualImg/TrustsedPNG.png" alt="Badge icon"
+                style="border-radius: 50%; width: 60px; height:60px; border: 2px solid orange;">
+            </div>
 
-              <h2 class="h2 card-title">
-                Certified <strong>AMFI and IRDA registered</strong>
-              </h2>
+            <h2 class="h2 card-title" style="font-size: large;">
+              AMFI Registered <strong> Trusted and Certified Expert</strong>
+            </h2>
 
-              <ion-icon name="chevron-forward-outline"></ion-icon>
 
-            </a>
-          </li>
 
-          <li>
-            <a href="#" class="stats-card">
+          </a>
+        </li>
 
-              <div class="card-icon">
-                <img src="/assets/images/Growth.png" alt="Checkmark icon"
-                  style="border-radius: 50%; width: 60px; height:60px; border: 2px solid orange;">
-              </div>
+        <li>
+          <a class="stats-card">
 
-              <h2 class="h2 card-title">
-                50+ <strong> LIVE SIP under Management</strong>
-              </h2>
+            <div class="card-icon">
+              <img src="./images/mutualImg/GaolPlanner.png" alt="Checkmark icon"
+                style="border-radius: 50%; width: 60px; height:60px; border: 2px solid orange;">
+            </div>
 
-              <ion-icon name="chevron-forward-outline"></ion-icon>
+            <h2 class="h2 card-title" style="font-size: large;">
+              Financial Gaol Planner<strong>Purpose-Based Investing Platform</strong>
+            </h2>
 
-            </a>
-          </li>
 
-          <li>
-            <a href="#" class="stats-card">
 
-              <div class="card-icon">
-                <img src="/assets/images/happyClient.png" alt="Peoples rating icon"
-                  style="border-radius: 50%; width: 60px; height:60px; border: 2px solid orange;">
-              </div>
+          </a>
+        </li>
 
-              <h2 class="h2 card-title">
-                100+ <strong>Happy Clients</strong>
-              </h2>
+        <li>
+          <a class="stats-card">
 
-              <ion-icon name="chevron-forward-outline"></ion-icon>
+            <div class="card-icon">
+              <img src="./images/mutualImg/OneloginPGP.png" alt="Peoples rating icon"
+                style="border-radius: 50%; width: 60px; height:60px; border: 2px solid orange;">
+            </div>
 
-            </a>
-          </li>
+            <h2 class="h2 card-title" style="font-size: large;">
+              One Login<strong>All Investments/Assets at one Login</strong>
+            </h2>
 
-        </ul>
-      </section>
+
+
+          </a>
+        </li>
+
+      </ul>
+    </section>
     <!--advantages-->
     <section class="project container" id="portfolio">
 
@@ -446,49 +509,57 @@
       <div class="row">
         <div class="column">
           <div class="card">
-            <img src="../../Prod_Offerings/pages/mutualImg/Divesification.png" width="80" height="80" alt="Alternate Text">
-            <h4 class="h3 contact-item-title">Diversification</h4>
+            <img src="../../assets/images/RiskTransfer.png" width="80" height="80" alt="Alternate Text">
+            <h4 class="h3 contact-item-title" style="text-transform: none;text-align: center;">Diversification</h4>
             <p class="section-text">
-              Mutual funds offer diversification through pooled investments in various assets, like stocks, bonds, 
-              and commodities, lowering risk.
-               Losses in one area can be balanced by gains in others, enhancing portfolio stability.
+              Mutual funds pool investments in diverse assets, like stocks, bonds, and commodities, reducing risk and enhancing <span></span>stability.
             </p>
+            <div class="btn-group" style="margin-top: 20px;">
+              <button class="btn btn-primary" onclick="changeTxt('Insurance','text','Insurance_Type')"><a href="#contact">Enquire Now</a></button>
+            </div>
 
-          </div>
-        </div>
-
-
-        <div class="column">
-          <div class="card" style="height: 414px;">
-            <img src="../../Prod_Offerings/pages/mutualImg/Proffesioinal Management.png" width="80" height="80" alt="Alternate Text">
-            <h4 class="h3 contact-item-title">Professional Management</h4>
-            <p class="section-text">
-              Mutual funds are overseen by skilled investment experts who conduct rigorous research, aiding individual investors who lack the time or expertise. 
-              This professional management enhances investment effectiveness and potential returns.
-            </p>
           </div>
         </div>
 
 
         <div class="column">
           <div class="card">
-            <img src="../../Prod_Offerings/pages/mutualImg/Liquidity.png" width="80" height="80" alt="Alternate Text">
-            <h4 class="h3 contact-item-title">Liquidity</h4>
+            <img src="../../assets/images/familyProtection.png" width="80" height="80" alt="Alternate Text">
+            <h4 class="h3 contact-item-title" style="text-transform: none; text-align: center;">Professional Management
+            </h4>
             <p class="section-text">
-              Mutual funds offer liquidity, enabling investors to buy or sell shares at NAV, ensuring flexibility. Share redemption on business 
-              days ensures convenient access to invested funds, enhancing financial adaptability.
+            Mutual funds, managed by expert fund managers, conduct thorough research, with improved <span></span>returns.
             </p>
+            <div class="btn-group" style="margin-top: 20px;">
+              <button class="btn btn-primary" onclick="changeTxt('Insurance','text','Insurance_Type')"><a href="#contact">Enquire Now</a></button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="column">
+          <div class="card">
+            <img src="../../assets/images/Peaceofmind.png" width="80" height="80" alt="Alternate Text">
+            <h4 class="h3 contact-item-title" style="text-transform: none;text-align: center;">Liquidity</h4>
+            <p class="section-text">
+              Mutual funds offer liquidity through NAV-based transactions, enabling easy access and convenient liquidation when <span></span>needed.
+            </p>
+            <div class="btn-group" style="margin-top: 20px;">
+              <button class="btn btn-primary" onclick="changeTxt('Insurance','text','Insurance_Type')"><a href="#contact">Enquire Now</a></button>
+            </div>
           </div>
         </div>
 
         <div class="column">
-          <div class="card" style="height: 400px;">
-            <img src="../../Prod_Offerings/pages/mutualImg/Affordabale Price.png" width="80" height="80" alt="Alternate Text">
-            <h4 class="h3 contact-item-title">Accessibility and Affordability</h4>
+          <div class="card">
+            <img src="../../assets/images/AssetProtection.png" width="80" height="80" alt="Alternate Text">
+            <h4 class="h3 contact-item-title" style="text-transform: none;text-align: center;">Accessibility and Affordability</h4>
             <p class="section-text">
-              Mutual funds are accessible to diverse investors, irrespective of their expertise or initial capital. Even with modest amounts, 
-              investors gain from cost efficiencies, as expenses are shared among all participants 
+              Mutual funds offer accessible investing, regardless of expertise or capital, benefiting from cost efficiencies shared among. <span></span>
             </p>
+            <div class="btn-group" style="margin-top: 20px;">
+              <button class="btn btn-primary" onclick="changeTxt('Insurance','text','Insurance_Type')"><a href="#contact">Enquire Now</a></button>
+            </div>
           </div>
         </div>
 
@@ -501,55 +572,68 @@
     </section>
 
 
-      <!-- 
+    <!-- 
         - #Parners
       -->
 
-      <section class="skills container" id="skills">
+    <section class="skills container" id="skills">
 
-        <div class="skills-content section-content">
+      <div class="skills-content section-content">
 
-          <p class="section-subtitle">Partners</p>
+        <p class="section-subtitle">Partners</p>
 
-          <h2 class="h3 section-title">Our Partners</h2>
+        <h2 class="h3 section-title">Our Partners</h2>
 
-          <p class="section-text">
-            For now we had a limited range of partners with there best expertise about investment and offers too.
-            With their expertise and in-depth knowledge of the market, we strive to provide you with tailored investment
-            solutions that align with your financial goals.
+        <p class="section-text">
+          For now we had a limited range of partners with there best expertise about investment and offers too.
+          With their expertise and in-depth knowledge of the market, we strive to provide you with tailored investment
+          solutions that align with your financial goals.
 
-          </p>
+        </p>
 
+      </div>
+
+
+      <div class="skills-box" data-skills-box style="background: var(--bg-secondary); border-radius: 20px;">
+        <div class="row" style="padding-top: 2rem; display: flex !important;">
+          <div class="column"><img src="./images/insuareimg/HDFC.png" alt=""
+              style="border: 2px solid var(--raw-seinna);"></div>
+          <div class="column"><img src="./images/insuareimg/Max.png" alt=""
+              style="border: 2px solid var(--raw-seinna);"></div>
+          <div class="column"><img src="./images/insuareimg/Star.png" alt=""
+              style="border: 2px solid var(--raw-seinna);"></div>
+          <!--<div class="column"><img src="../../assets/images/partners/4.png" alt=""
+              style="border: 2px solid var(--raw-seinna);"></div>-->
+              
         </div>
-
-        <div class="skills-box" data-skills-box style="background: var(--bg-secondary); border-radius: 20px;">
-          <div class="row" style="padding-top: 2rem; display: flex !important;">
-            <div class="column"><img src="../../assets/images/partners/1.png" alt=""></div>
-            <div class="column"><img src="../../assets/images/partners/2.png" alt=""></div>
-            <div class="column"><img src="../../assets/images/partners/3.png" alt=""></div>
-            <div class="column"><img src="../../assets/images/partners/4.png" alt=""></div>
-          </div>
-          <div class="row" style="display: flex !important;">
-            <div class="column" style="margin-bottom: 0px;"><img src="../../assets/images/partners/5.png" alt=""></div>
-            <div class="column" style="margin-bottom: 0px;"><img src="../../assets/images/partners/6.png" alt=""></div>
-            <div class="column" style="margin-bottom: 0px;"><img src="../../assets/images/partners/7.png" alt=""></div>
-            <div class="column" style="margin-bottom: 0px;"><img src="../../assets/images/partners/8.png" alt=""></div>
-          </div>
-
-          <div style="color: var(--raw-seinna); text-align: end; padding-right: 20px;">...Many More</div>
+        <!--add more rows if required-->
+        <!--<div class="row" style="display: flex !important;">
+          <div class="column" style="margin-bottom: 0px;"><img src="../../assets/images/partners/5.png" alt=""
+              style="border: 2px solid var(--raw-seinna);"></div>
+          <div class="column" style="margin-bottom: 0px;"><img src="../../assets/images/partners/6.png" alt=""
+              style="border: 2px solid var(--raw-seinna);"></div>
+          <div class="column" style="margin-bottom: 0px;"><img src="../../assets/images/partners/7.png" alt=""
+              style="border: 2px solid var(--raw-seinna);"></div>
+          <div class="column" style="margin-bottom: 0px;"><img src="../../assets/images/partners/8.png" alt=""
+              style="border: 2px solid var(--raw-seinna);"></div>
         </div>
+         -->
 
-      </section>
+        <div style="color: var(--raw-seinna); text-align: end; padding-right: 20px;">...Many More</div>
+      </div>
 
-         <!--contact us-->
+    </section>
+
+    <!--contact us-->
     <div id="contact">
       <section class="contact container">
         <form action="" class="contact-form">
-          <h2 class="h3 section-title" style="text-align: center;" id="text">Insurance</h2>
+          <h2 class="h3 section-title" style="text-align: center; font-size: 20px; margin-bottom: 0px;" id="text">
+            Insurance</h2>
 
-          <div class="form-wrapper">
+          <div class="form-wrapper" style="margin-bottom: 4px;">
 
-            <label for="name" class="form-label">Name</label>
+            <label for="name" class="form-label" style="margin-bottom: 0px;">Name</label>
 
             <div class="input-wrapper">
 
@@ -561,9 +645,9 @@
 
           </div>
 
-          <div class="form-wrapper">
+          <div class="form-wrapper" style="margin-bottom: 4px;">
 
-            <label for="name" class="form-label">Insurance Type</label>
+            <label for="name" class="form-label" style="margin-bottom: 0px;">Insurance Type</label>
 
             <div class="input-wrapper">
 
@@ -577,9 +661,9 @@
 
           </div>
 
-          <div class="form-wrapper">
+          <div class="form-wrapper" style="margin-bottom: 4px;">
 
-            <label for="email" class="form-label">Email</label>
+            <label for="email" class="form-label" style="margin-bottom: 0px;">Email</label>
 
             <div class="input-wrapper">
 
@@ -592,9 +676,9 @@
 
           </div>
 
-          <div class="form-wrapper">
+          <div class="form-wrapper" style="margin-bottom: 4px;">
 
-            <label for="phone" class="form-label">Phone</label>
+            <label for="phone" class="form-label" style="margin-bottom: 0px;">Phone</label>
 
             <div class="input-wrapper">
 
@@ -606,14 +690,14 @@
 
           </div>
 
-          <div class="form-wrapper">
+          <div class="form-wrapper" >
 
-            <label for="message" class="form-label">Message</label>
+            <label for="message" class="form-label" style="margin-bottom: 0px;">Message</label>
 
             <div class="input-wrapper">
 
-              <textarea name="message" id="message" required placeholder="Write message..."
-                class="input-field"></textarea>
+              <textarea name="message" id="message" required placeholder="Write message..." class="input-field"
+                style="min-height: 52px; height: 0px;"></textarea>
 
               <ion-icon name="chatbubbles"></ion-icon>
 
@@ -635,12 +719,12 @@
           }
         </style>
 
-       <div class="response">
+        <div class="response">
 
-       </div>
+        </div>
 
       </section>
-      
+
 
     </div>
 
@@ -658,12 +742,13 @@
 
       <div class="row">
         <div class="column">
-          <div class="card" style="text-align: center; background: none;">
+          <div class="card" style="text-align: center; background: none;height: 14rem;">
             <img src="../../assets/images/avatar-1606916_640.png" width="63" height="65" alt="Alternate Text" style="margin-right: auto;
             margin-left: auto;border-radius: 40%;">
-            <h4 class="h3 contact-item-title">Plan Options</h4>
+            <h4 class="h3 contact-item-title">KALPIT</h4>
             <p class="section-text" style="-webkit-line-clamp: unset; padding-top: 0px !important;">
-              We offer best insurance plans option looking at the requirement of client with best efforts.
+              I am using this platform has been a fantastic experience. Having all my financial investments in one login
+              is incredibly convenient. Thanks to MyCashFlow!
             </p>
 
           </div>
@@ -671,35 +756,35 @@
 
 
         <div class="column">
-          <div class="card" style="text-align: center; background: none;">
+          <div class="card" style="text-align: center; background: none;height: 14rem;">
             <img src="../../assets/images/avatar-1606916_640.png" width="63" height="65" alt="Alternate Text" style="margin-right: auto;
             margin-left: auto;border-radius: 40%;">
-            <h4 class="h3 contact-item-title">Stock Broking</h4>
+            <h4 class="h3 contact-item-title">SHRIKANT</h4>
             <p class="section-text" style="-webkit-line-clamp: unset; padding-top: 0px !important;">
-              We offer best insurance plans option looking at the requirement of client with best efforts.
+              I'm so glad I found MyCashFlow! Their customized financial plans have helped me secure my future. Highly recommended!
             </p>
           </div>
         </div>
 
 
         <div class="column">
-          <div class="card" style="text-align: center; background: none;">
+          <div class="card" style="text-align: center; background: none;height: 14rem;">
             <img src="../../assets/images/avatar-1606916_640.png" width="63" height="65" alt="Alternate Text" style="margin-right: auto;
             margin-left: auto;border-radius: 40%;">
-            <h4 class="h3 contact-item-title">Stock Broking</h4>
+            <h4 class="h3 contact-item-title">VINAY</h4>
             <p class="section-text" style="-webkit-line-clamp: unset; padding-top: 0px !important;">
-              We offer best insurance plans option looking at the requirement of client with best efforts.
+              As a business partner, I can't praise MyCashFlow enough. Their advice and coordination have been instrumental in our success.
             </p>
           </div>
         </div>
 
         <div class="column">
-          <div class="card" style="text-align: center; background: none;">
+          <div class="card" style="text-align: center; background: none;height: 14rem;">
             <img src="../../assets/images/avatar-1606916_640.png" width="63" height="65" alt="Alternate Text" style="margin-right: auto;
             margin-left: auto;border-radius: 40%;">
-            <h4 class="h3 contact-item-title">Stock Broking</h4>
+            <h4 class="h3 contact-item-title">SANJAY</h4>
             <p class="section-text" style="-webkit-line-clamp: unset; padding-top: 0px !important;">
-              We offer best insurance plans option looking at the requirement of client with best efforts.
+              I've had a great experience here. Getting access to all financial product options is fantastic!
             </p>
           </div>
         </div>
@@ -711,198 +796,200 @@
     </section>
 
 
- 
-         <!-- 
+
+    <!-- 
         - #CONTACT
       -->
 
-      <section class="contact container" id="contact">
 
-        <div class="contact-content section-content">
+    <section class="contact container space2" id="contact">
 
-          <p class="section-subtitle">Contact</p>
+      <div class="contact-content section-content">
 
-          <h2 class="h3 section-title">ABOUT US</h2>
+        <p class="section-subtitle">Contact</p>
 
-          <p class="section-text">
-            Welcome to MYCAHFLOW,<br>
+        <h2 class="h3 section-title">ABOUT US</h2>
 
-            your trusted partner in financial well-being. We are committed to helping you plan your investments and
-            manage risk effectively. With our market expertise, we offer tailored solutions to align with your financial
-            goals. <span></span>
+        <p class="section-text">
+          Welcome to MYCAHFLOW,<br>
 
-            Beyond mutual funds, we provide comprehensive insurance options for peace of mind and personalized loan
-            services to turn your dreams into reality, be it a personal loan or financing your dream home. We prioritize
-            long-lasting client relationships, offering guidance in informed financial decisions. <span></span>
+          your trusted partner in financial well-being. We are committed to helping you plan your investments and
+          manage risk effectively. With our market expertise, we offer tailored solutions to align with your financial
+          goals. <span></span>
 
-            Connect with us to experience a reliable, customer-centric approach to mutual funds, insurance, loans, tax
-            planning, and filing. Your financial success begins with us.
-          </p>
-          <!-- <p class="section-text">
+          Beyond mutual funds, we provide comprehensive insurance options for peace of mind and personalized loan
+          services to turn your dreams into reality, be it a personal loan or financing your dream home. We prioritize
+          long-lasting client relationships, offering guidance in informed financial decisions. <span></span>
+
+          Connect with us to experience a reliable, customer-centric approach to mutual funds, insurance, loans, tax
+          planning, and filing. Your financial success begins with us.
+        </p>
+        <!-- <p class="section-text">
             Together, let's pave the way for a secure and prosperous future!
 
           </p>  -->
 
-          <ul class="contact-list">
+        <ul class="contact-list">
 
-            <li class="contact-list-item">
+          <li class="contact-list-item">
 
-              <div class="contact-item-icon">
-                <ion-icon name="call-outline"></ion-icon>
-              </div>
+            <div class="contact-item-icon">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
 
-              <div class="wrapper">
-                <h3 class="h4 contact-item-title">Phone:</h3>
+            <div class="wrapper">
+              <h3 class="h4 contact-item-title">Phone:</h3>
 
-                <a href="tel:01234567789" class="contact-info">(+91) 9372077400</a>
-
-
-              </div>
-
-            </li>
-
-            <li class="contact-list-item">
-
-              <div class="contact-item-icon">
-                <ion-icon name="mail-outline"></ion-icon>
-              </div>
-
-              <div class="wrapper">
-                <h3 class="h4 contact-item-title">Email:</h3>
-
-                <a href="mailto:info@jack.com" class="contact-info">info@mycashflowhub.com</a>
+              <a href="tel:01234567789" class="contact-info">(+91) 9372077400</a>
 
 
-              </div>
+            </div>
 
-            </li>
+          </li>
 
-            <li>
-              <ul class="contac-social-list">
+          <li class="contact-list-item">
 
-                <li>
-                  <a href="#" class="contact-social-link">
-                    <div class="tooltip">Facebook</div>
+            <div class="contact-item-icon">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
 
-                    <ion-icon name="logo-facebook"></ion-icon>
-                  </a>
-                </li>
+            <div class="wrapper">
+              <h3 class="h4 contact-item-title">Email:</h3>
 
-                <li>
-                  <a href="#" class="contact-social-link">
-                    <div class="tooltip">Twitter</div>
+              <a href="mailto:info@jack.com" class="contact-info">info@mycashflowhub.com</a>
 
-                    <ion-icon name="logo-twitter"></ion-icon>
-                  </a>
-                </li>
 
-                <li>
-                  <a href="#" class="contact-social-link">
-                    <div class="tooltip">Linkedin</div>
+            </div>
 
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                  </a>
-                </li>
+          </li>
 
-                <li>
-                  <a href="#" class="contact-social-link">
-                    <div class="tooltip">Youtube</div>
+          <li>
+            <ul class="contac-social-list">
 
-                    <ion-icon name="logo-youtube"></ion-icon>
-                  </a>
-                </li>
+              <li>
+                <a href="#" class="contact-social-link">
+                  <div class="tooltip">Facebook</div>
 
-              </ul>
-            </li>
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
 
-          </ul>
+              <li>
+                <a href="#" class="contact-social-link">
+                  <div class="tooltip">Twitter</div>
+
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="contact-social-link">
+                  <div class="tooltip">Linkedin</div>
+
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="contact-social-link">
+                  <div class="tooltip">Youtube</div>
+
+                  <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <form action="" class="contact-form">
+
+        <div class="form-wrapper">
+
+          <label for="name" class="form-label">Name</label>
+
+          <div class="input-wrapper">
+
+            <input type="text" name="name" id="name" required placeholder="e.g John Doe" class="input-field">
+
+            <ion-icon name="person-circle"></ion-icon>
+
+          </div>
 
         </div>
 
-        <form action="" class="contact-form">
+        <div class="form-wrapper">
 
-          <div class="form-wrapper">
+          <label for="email" class="form-label">Email</label>
 
-            <label for="name" class="form-label">Name</label>
+          <div class="input-wrapper">
 
-            <div class="input-wrapper">
+            <input type="email" name="email" id="email" required placeholder="e.g johndoe@mail.com" class="input-field">
 
-              <input type="text" name="name" id="name" required placeholder="e.g John Doe" class="input-field">
-
-              <ion-icon name="person-circle"></ion-icon>
-
-            </div>
+            <ion-icon name="mail"></ion-icon>
 
           </div>
 
-          <div class="form-wrapper">
+        </div>
 
-            <label for="email" class="form-label">Email</label>
+        <div class="form-wrapper">
 
-            <div class="input-wrapper">
+          <label for="phone" class="form-label">Phone</label>
 
-              <input type="email" name="email" id="email" required placeholder="e.g johndoe@mail.com"
-                class="input-field">
+          <div class="input-wrapper">
 
-              <ion-icon name="mail"></ion-icon>
+            <input type="tel" name="phone" id="phone" required placeholder="Phone Number" class="input-field">
 
-            </div>
-
-          </div>
-
-          <div class="form-wrapper">
-
-            <label for="phone" class="form-label">Phone</label>
-
-            <div class="input-wrapper">
-
-              <input type="tel" name="phone" id="phone" required placeholder="Phone Number" class="input-field">
-
-              <ion-icon name="call"></ion-icon>
-
-            </div>
+            <ion-icon name="call"></ion-icon>
 
           </div>
 
-          <div class="form-wrapper">
+        </div>
 
-            <label for="message" class="form-label">Message</label>
+        <div class="form-wrapper">
 
-            <div class="input-wrapper">
+          <label for="message" class="form-label">Message</label>
 
-              <textarea name="message" id="message" required placeholder="Write message..."
-                class="input-field"></textarea>
+          <div class="input-wrapper">
 
-              <ion-icon name="chatbubbles"></ion-icon>
+            <textarea name="message" id="message" required placeholder="Write message..."
+              class="input-field"></textarea>
 
-            </div>
+            <ion-icon name="chatbubbles"></ion-icon>
 
           </div>
 
-          <button type="submit" class="btn btn-primary">Send</button>
+        </div>
 
-        </form>
+        <button type="submit" class="btn btn-primary">Send</button>
 
-      </section>
+      </form>
+
+    </section>
+
   </main>
 
   <!-- disclaimer -->
-<div class="disclaimer">
-  <p>
-  <strong>  Universe Enterprise </strong>
-  <span></span>
-  Registration No. 2352300317895448
-  
-  F.No.202 P.N0.17 Chatrapati Apartment, Manish Nagar, Nagpur -440015 <span></span>
-  
-  Registration Details: AMFI Reg No.: ARN-           <span></span>                                 
-  
-  Disclaimer: Investment in securities market are subject to market risks, read all the related documents carefully before investing.
-  
-   
-  <span></span>
-  <strong>Copyright © 2023 Universe Enterprise</strong>
-  </p>
+  <div class="disclaimer">
+    <p>
+      <strong> Universe Enterprise </strong>
+      <span></span>
+      Registration No. 2352300317895448
+
+      F.No.202 P.N0.17 Chatrapati Apartment, Manish Nagar, Nagpur -440015 <span></span>
+
+      Registration Details: AMFI Reg No.: ARN- <span></span>
+
+      Disclaimer: Investment in securities market are subject to market risks, read all the related documents carefully
+      before investing.
+
+
+      <span></span>
+      <strong>Copyright © 2023 Universe Enterprise</strong>
+    </p>
   </div>
 
   <!-- 

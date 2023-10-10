@@ -180,6 +180,11 @@
 
 
     }
+
+    .grid-container span {
+      color: black;
+
+    }
   </style>
 </head>
 
@@ -274,11 +279,11 @@
     <div class="mainimg" style="background-image: url(./images/mutualImg/MutualFundNew1600by700.png);">
       <div id="divf">
         <div class="h33">
-          <div style="display: flex;"><span style="color: brown;"> Empower financial goals. Invest Now!</span>
+          <div style="display: flex;"><span style="color: brown;"> Empower financial goals:</span>
             <span style="color: green;"> Get
-              Insurance </span><span>
+              Funds </span>
           </div>
-          Today for Peace of Mind.</span>
+          Today for Peace of Mind. Invest Now!</span>
         </div>
 
         </h4>
@@ -301,7 +306,7 @@
 
           <div class="grid-container grid">
             <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 0%;padding: 4px;"
-              onclick="changeTxt('Term Life','text','Insurance_Type')">
+              onclick="changeTxt('Mutual Fund','text','Insurance_Type')">
               <a href="#contact" class="box">
                 <div>
                   <img src="./images/mutualImg/MutulFundSVJ.svg" alt="">
@@ -310,13 +315,13 @@
               </a>
             </div>
             <div style="text-align: center;color: rgb(27, 27, 26);">
-              <span>Mutual Fund</span><span style="position: relative;top: -10px;">.</span>
+              <span>Mutual</span><span style="position: relative;top: -10px;">Fund</span>
             </div>
 
           </div>
           <div class="grid-container grid">
             <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 0%;padding: 4px;"
-              onclick="changeTxt('Health Insurance','text','Insurance_Type')">
+              onclick="changeTxt('SIP Funds','text','Insurance_Type')">
               <a href="#contact" class="box">
                 <div>
                   <div>
@@ -326,14 +331,14 @@
               </a>
             </div>
             <div style="text-align: center; color:  var(--raw-seinna);">
-              <span>SIP</span><span style="position: relative;top: -10px;">.</span>
+              <span>SIP</span><span style="position: relative;top: -10px;">Funds</span>
             </div>
 
           </div>
 
           <div class="grid-container grid">
             <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 0%;padding: 4px;"
-              onclick="changeTxt('Car Insurance','text','Insurance_Type')">
+              onclick="changeTxt('ELSS Funds','text','Insurance_Type')">
               <a href="#contact" class="box">
                 <div>
                   <img src="./images/mutualImg/ELSSSVJ.svg" alt="">
@@ -341,14 +346,14 @@
               </a>
             </div>
             <div style="text-align: center;color: aquamarine;">
-              <span>ELSS</span><span style="position: relative;top: -10px;">.</span>
+              <span>ELSS</span><span style="position: relative;top: -10px;">Funds</span>
             </div>
 
           </div>
 
           <div class="grid-container grid">
             <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 0%;padding: 4px;"
-              onclick="changeTxt('2 wheeler Insurance','text','Insurance_Type')">
+              onclick="changeTxt('SWP And STP','text','Insurance_Type')">
               <a href="#contact" class="box">
                 <div>
                   <img src="./images/mutualImg/SWPSVJ.svg" alt="">
@@ -356,14 +361,14 @@
               </a>
             </div>
             <div style="text-align: center;color: rgb(5, 5, 5);">
-              <span>SWP/STP</span><span style="position: relative;top: -10px;">.</span>
+              <span>SWP And</span><span style="position: relative;top: -10px;">STP</span>
             </div>
 
           </div>
 
           <div class="grid-container grid">
             <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 0%;padding: 4px;"
-              onclick="changeTxt('Travel Insurance','text','Insurance_Type')">
+              onclick="changeTxt('Equity Fund','text','Insurance_Type')">
               <a href="#contact" class="box">
                 <div>
                   <img src="./images/mutualImg/EquityFundSVJ.svg" alt="">
@@ -378,7 +383,7 @@
 
           <div class="grid-container grid">
             <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 0%;padding: 4px;"
-              onclick="changeTxt('Bussiness Insurance','text','Insurance_Type')">
+              onclick="changeTxt('Debt/Liquid Fund','text','Insurance_Type')">
               <a href="#contact" class="box">
                 <div>
                   <img src="./images/mutualImg/DebtFundSVJ.svg" alt="">
@@ -393,7 +398,7 @@
 
           <div class="grid-container grid">
             <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 0%;padding: 4px;"
-              onclick="changeTxt('Invest Plan Insurance','text','Insurance_Type')">
+              onclick="changeTxt('Portfolio Balancing','text','Insurance_Type')">
               <a href="#contact" class="box">
                 <div>
                   <img src="./images/mutualImg/PortfolioBalancing.svg" alt="">
@@ -408,7 +413,7 @@
 
           <div class="grid-container grid">
             <div style="border: 2px solid hsl(24, 74%, 58%);border-radius: 0%;padding: 4px;"
-              onclick="changeTxt('Property Insurance','text','Insurance_Type')">
+              onclick="changeTxt('Goal Based Planning','text','Insurance_Type')">
               <a href="#contact" class="box">
                 <div>
                   <img src="./images/mutualImg/GaolBasedSVJ.svg" alt="">
@@ -512,10 +517,12 @@
             <img src="../../assets/images/RiskTransfer.png" width="80" height="80" alt="Alternate Text">
             <h4 class="h3 contact-item-title" style="text-transform: none;text-align: center;">Diversification</h4>
             <p class="section-text">
-              Mutual funds pool investments in diverse assets, like stocks, bonds, and commodities, reducing risk and enhancing <span></span>stability.
+              Mutual funds pool investments in diverse assets, like stocks, bonds, and commodities, reducing risk and
+              enhancing <span></span>stability.
             </p>
             <div class="btn-group" style="margin-top: 20px;">
-              <button class="btn btn-primary" onclick="changeTxt('Insurance','text','Insurance_Type')"><a href="#contact">Enquire Now</a></button>
+              <button class="btn btn-primary" onclick="changeTxt('Insurance','text','Insurance_Type')"><a
+                  href="#contact">Enquire Now</a></button>
             </div>
 
           </div>
@@ -528,10 +535,12 @@
             <h4 class="h3 contact-item-title" style="text-transform: none; text-align: center;">Professional Management
             </h4>
             <p class="section-text">
-            Mutual funds, managed by expert fund managers, conduct thorough research, with improved <span></span>returns.
+              Mutual funds, managed by expert fund managers, conduct thorough research, with improved
+              <span></span>returns.
             </p>
             <div class="btn-group" style="margin-top: 20px;">
-              <button class="btn btn-primary" onclick="changeTxt('Insurance','text','Insurance_Type')"><a href="#contact">Enquire Now</a></button>
+              <button class="btn btn-primary" onclick="changeTxt('Insurance','text','Insurance_Type')"><a
+                  href="#contact">Enquire Now</a></button>
             </div>
           </div>
         </div>
@@ -542,10 +551,12 @@
             <img src="../../assets/images/Peaceofmind.png" width="80" height="80" alt="Alternate Text">
             <h4 class="h3 contact-item-title" style="text-transform: none;text-align: center;">Liquidity</h4>
             <p class="section-text">
-              Mutual funds offer liquidity through NAV-based transactions, enabling easy access and convenient liquidation when <span></span>needed.
+              Mutual funds offer liquidity through NAV-based transactions, enabling easy access and convenient
+              liquidation when <span></span>needed.
             </p>
             <div class="btn-group" style="margin-top: 20px;">
-              <button class="btn btn-primary" onclick="changeTxt('Insurance','text','Insurance_Type')"><a href="#contact">Enquire Now</a></button>
+              <button class="btn btn-primary" onclick="changeTxt('Insurance','text','Insurance_Type')"><a
+                  href="#contact">Enquire Now</a></button>
             </div>
           </div>
         </div>
@@ -553,12 +564,15 @@
         <div class="column">
           <div class="card">
             <img src="../../assets/images/AssetProtection.png" width="80" height="80" alt="Alternate Text">
-            <h4 class="h3 contact-item-title" style="text-transform: none;text-align: center;">Accessibility and Affordability</h4>
+            <h4 class="h3 contact-item-title" style="text-transform: none;text-align: center;">Accessibility and
+              Affordability</h4>
             <p class="section-text">
-              Mutual funds offer accessible investing, regardless of expertise or capital, benefiting from cost efficiencies shared among. <span></span>
+              Mutual funds offer accessible investing, regardless of expertise or capital, benefiting from cost
+              efficiencies shared among. <span></span>
             </p>
             <div class="btn-group" style="margin-top: 20px;">
-              <button class="btn btn-primary" onclick="changeTxt('Insurance','text','Insurance_Type')"><a href="#contact">Enquire Now</a></button>
+              <button class="btn btn-primary" onclick="changeTxt('Insurance','text','Insurance_Type')"><a
+                  href="#contact">Enquire Now</a></button>
             </div>
           </div>
         </div>
@@ -604,7 +618,7 @@
               style="border: 2px solid var(--raw-seinna);"></div>
           <!--<div class="column"><img src="../../assets/images/partners/4.png" alt=""
               style="border: 2px solid var(--raw-seinna);"></div>-->
-              
+
         </div>
         <!--add more rows if required-->
         <!--<div class="row" style="display: flex !important;">
@@ -690,7 +704,7 @@
 
           </div>
 
-          <div class="form-wrapper" >
+          <div class="form-wrapper">
 
             <label for="message" class="form-label" style="margin-bottom: 0px;">Message</label>
 
@@ -761,7 +775,8 @@
             margin-left: auto;border-radius: 40%;">
             <h4 class="h3 contact-item-title">SHRIKANT</h4>
             <p class="section-text" style="-webkit-line-clamp: unset; padding-top: 0px !important;">
-              I'm so glad I found MyCashFlow! Their customized financial plans have helped me secure my future. Highly recommended!
+              I'm so glad I found MyCashFlow! Their customized financial plans have helped me secure my future. Highly
+              recommended!
             </p>
           </div>
         </div>
@@ -773,7 +788,8 @@
             margin-left: auto;border-radius: 40%;">
             <h4 class="h3 contact-item-title">VINAY</h4>
             <p class="section-text" style="-webkit-line-clamp: unset; padding-top: 0px !important;">
-              As a business partner, I can't praise MyCashFlow enough. Their advice and coordination have been instrumental in our success.
+              As a business partner, I can't praise MyCashFlow enough. Their advice and coordination have been
+              instrumental in our success.
             </p>
           </div>
         </div>

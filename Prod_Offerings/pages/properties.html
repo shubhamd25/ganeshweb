@@ -183,6 +183,12 @@
 
 
     }
+    header a{
+      text-transform: none;
+    }
+    .dropbtn {
+      text-transform: none !important;
+    }
   </style>
 </head>
 
@@ -192,11 +198,11 @@
     - #HEADER
   -->
 
-  <header class="header" data-header style="background-color: var(--bg-primary);padding-block: 10px;">
+  <header class="header" data-header style="background-color: var(--bg-secondary);padding-block: 10px;">
     <div class="container">
 
       <h1 class="h1 logo">
-        <a href="#">MYCASHFLOW<span>.</span></a>
+        <img src="https://blog.mycashflowhub.com/wp-content/uploads/2023/09/Logo_companey.png" alt="" height="60px"  width="160px" style="border-radius: 0%;">
       </h1>
 
       <div class="navbar-actions">
@@ -219,21 +225,20 @@
       </button>
 
       <nav class="navbar" data-navbar id="myTopnav">
-        <a href="../../index.html" class="active">Home</a>
+        <a href="../../index.html">Home</a>
         <a href="../../index.html#about">About Us</a>
 
         <div class="dropdown">
-          <button class="dropbtn">Product Offering
-            <i class="fa fa-caret-down"></i>
+          <button class="dropbtn active" style="background-color: var(--bg-primary);" >Product & Services
           </button>
           <div class="dropdown-content">
             <a href="../index.html">All Products</a>
-            <a href="./mutual.html">MUTUAL FUNDS</a>
-            <a href="./insurance.html">INSURANCE</a>
-            <a href="./fip.html">FIXED INCOME PRODUCTS</a>
-            <a href="./loan.html">LOAN</a>
-            <a href="./properties.html">Properties</a>
-            <a href="./itr.html">ITR PLANNING/FILLING</a>
+            <a href="./mutual.html">Mutual Funds</a>
+            <a href="./insurance.html" >Insurance</a>
+            <a href="./fip.html" >Fixed Income Products</a>
+            <a href="./loan.html" >Loan</a>
+            <a href="./properties.html" >Properties</a>
+            <a href="./itr.html" >ITR Planning/Filling</a>
           </div>
         </div>
         <div class="dropdown">
@@ -247,7 +252,7 @@
             <a href="#">EMI calculator</a>
           </div>
         </div>
-        <a href="https://blog.mycashflowhub.com/">Blog</a>
+        <a href="https://blog.mycashflowhub.com/">Blogs</a>
 
     </div>
     </nav>

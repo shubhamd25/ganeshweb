@@ -210,7 +210,7 @@
           <button class="btn btn-primary" style="padding: 5px 28px;">Login</button></a>
         </div>
 
-        <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
+        <button class="theme-btn active" aria-label="Change Theme" title="Change Theme" data-theme-btn>
           <span class="icon"></span>
         </button>
 
@@ -295,9 +295,11 @@
         <script type="text/javascript">
           function changeTxt(t, o, name) {
             var o = document.getElementById(o);
+            var x = document.getElementById('Insurance_Type1');
             var name = document.getElementById(name);
             o.innerHTML = t; //Will change the text within the H1 tag to whatever you supply in the first argument, 't'.
             name.value = t;
+            x.value = t;
 
           }
         </script>
@@ -603,7 +605,7 @@
     <!--contact us-->
     <div id="contact">
       <section class="contact container" style="position: relative; top: 16px;">
-        <form action="" class="contact-form">
+        <form method="post" action="https://success.mycashflowhub.com" class="contact-form">
           <h2 class="h3 section-title" style="text-align: center; font-size: 20px; margin-bottom: 0px;" id="text">
             Fixed Income</h2>
 
@@ -630,6 +632,8 @@
 
               <input type="text" name="Insurance Type" id="Insurance_Type" class="input-field" value="not defined"
                 disabled>
+                <input type="hidden" name="Insurance Type" id="Insurance_Type1" class="input-field" value="not defined"
+                >
 
               <ion-icon name="cash-outline"></ion-icon>
 
@@ -897,7 +901,7 @@
 
       </div>
 
-      <form action="" class="contact-form">
+      <form method="post" action="https://success.mycashflowhub.com" class="contact-form">
 
         <div class="form-wrapper">
 

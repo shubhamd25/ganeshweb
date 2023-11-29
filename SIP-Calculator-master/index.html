@@ -9,18 +9,19 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
- 
+
 </head>
 
 <body>
   <div class="header" id="topheader">
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg" style="height: 62px;">
       <div class="container text-uppercase p-2">
 
 
         <a class="navbar-brand font-weight-bold text-white" href="#">Sip Calculator</a>
-        <button class="navbar-toggler button navbar-toggler backgroundColor:green" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
+        <button class="navbar-toggler button navbar-toggler backgroundColor:green" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon border border-danger rounded-left rounded-right backgroundColor:red"></span>
         </button>
 
@@ -52,13 +53,13 @@
 
                 <label class="form-field-label" for="first-name">Investment Amount(Rs.): <em
                     class="alert">*</em></label>
-                    
+
                 <br>
                 <p id='val_amnt' style="color: red; margin-bottom: 0px;" class='valid_deactive'>
-                     
+
                   Investment Amount is required
-                  
-               </p>
+
+                </p>
                 <div class="form-wrap" style="display:grid; grid-auto-flow: column;">
                   <div>
                     <input type="number" name="" id="invstamount" required>
@@ -77,24 +78,24 @@
                 <br>
                 <label class="form-field-label" for="first-name">Expected Annual Returns (%) <em
                     class="alert">*</em></label>
-                    <br>
-                    <p id='val_rate' style="color: red; margin-bottom: 0px;" class='valid_deactive'>
-                     
-                      Expected Annual Returns is required
-                      
-                   </p>
+                <br>
+                <p id='val_rate' style="color: red; margin-bottom: 0px;" class='valid_deactive'>
+
+                  Expected Annual Returns is required
+
+                </p>
                 <input type="number" name="" id="expreturn" required>
               </div>
               <div class="col-sm-6">
                 <label class="form-field-label" for="first-name" id="field3">Investment Period (Years) : <em
                     class="alert">*</em></label>
-                    <br>
-                    <p id='val_per' style="color: red; margin-bottom: 0px;" class='valid_deactive'>
-                     
-                      Investment Period is required
-                      
-                   </p>
-                
+                <br>
+                <p id='val_per' style="color: red; margin-bottom: 0px;" class='valid_deactive'>
+
+                  Investment Period is required
+
+                </p>
+
                 <input type="number" name="" id="invstperiod" required>
                 <br>
                 <br>
@@ -124,12 +125,16 @@
           <div class="row">
             <div class="col-sm-6">
               <div id="result1" class="container res-box">
+
                 <label class="form-field-label" for="first-name">Expected Amount: <em class="alert">*</em></label>
                 <span id="rf1" style="margin-left:5px; color:black; ">Rs. &nbsp;</span>
-                <br><label class="form-field-label" for="first-name">Amount Invested: <em class="alert">*</em></label>
+                <span id="rf12" style=" color:black; font-weight: 500;">&nbsp;</span>
+                <br><br><label class="form-field-label" for="first-name">Amount Invested: <em class="alert">*</em></label>
                 <span id="rf2" style="margin-left:5px; color:black; ">Rs. &nbsp;</span>
-                <br><label class="form-field-label" for="first-name">Profit Earned: <em class="alert">*</em></label>
+                <span id="rf22" style=" color:#F2AF29;font-weight: 500; ">&nbsp;</span>
+                <br><br><label class="form-field-label" for="first-name">Profit Earned: <em class="alert">*</em></label>
                 <span id="rf3" style="margin-left:5px; color:black; ">Rs. &nbsp;</span>
+                <span id="rf32" style=" color:#45CB85;font-weight: 500; ">&nbsp;</span>
 
               </div>
               <div id="result2" class="container res-box">
@@ -140,7 +145,7 @@
             <div class="col-sm-6 res_table">
               <div class="container res-box" id="result3">
                 <table class="table table-hover">
-                  <caption style="caption-side: top; text-align: center;" id="tab_cap">Projected SIP returns for various
+                  <caption style="caption-side: top; text-align: center;" id="tab_cap">Projected SIP returns after
                     time durations. [ @rate ]</caption>
                   <thead>
                     <tr>
@@ -159,37 +164,31 @@
           </div>
         </div>
       </div>
-   
+
 
 
     </section>
- 
-     <!-- disclaimer -->
-<div  style=" text-align: center; background-color: orange; padding-block: 8px; padding-right: 20px; padding-left: 20px; height: 200px;">
-  <p>
-  <strong>  Universe Enterprise </strong>
-  <span></span>
-  Registration No. 2352300317895448
-  
-  F.No.202 P.N0.17 Chatrapati Apartment, Manish Nagar, Nagpur -440015 <span></span>
-  
-  Registration Details: AMFI Reg No.: ARN-           <span></span>                                 
-  
-  Disclaimer: Investment in securities market are subject to market risks, read all the related documents carefully before investing.
-  
-   
-  <span></span>
-  <strong>Copyright © 2023 Universe Enterprise</strong>
-  </p>
-  </div>
+
+    <!-- disclaimer -->
+    <div
+      style="font-family: 'Roboto', sans-serif;" class="disclaimer">
+      <p>
+        <strong> Universe Enterprise </strong>
+        <br><br>
+        Registration No. 2352300317895448
+
+        F.No.202 P.N0.17 Chatrapati Apartment, Manish Nagar, Nagpur -440015 <br>
+
+        Registration Details: AMFI Reg No.: ARN- <br>
+
+        Disclaimer: Investment in securities market are subject to market risks, read all the related documents
+        carefully before investing.
 
 
-
-    <section class="footer">
-      <div class="footer-copyright text-center py-3">© 2023 Copyright Protected
-
-      </div>
-    </section>
+        <div></div>
+        <strong>Copyright © 2023 Universe Enterprise</strong>
+      </p>
+    </div>
   </div>
 
 
@@ -224,15 +223,16 @@
       data: {
         labels: ['Amount in Rs'],
         datasets: [{
-            label: 'Invested Amount',
-            data: [result.amount_invested],
-            backgroundColor: '#F2AF29',
-          },
-          {
-            label: 'Profit Earned',
-            data: [result.profit_earned],
-            backgroundColor: '#45CB85',
-          }
+          label: 'Invested Amount',
+          data: [result.amount_invested],
+          backgroundColor: '#F2AF29',
+          
+        },
+        {
+          label: 'Profit Earned',
+          data: [result.profit_earned],
+          backgroundColor: '#45CB85',
+        }
         ]
       },
       options: {
@@ -252,7 +252,7 @@
   function createTable() {
     var var_year = Number(invstperiod.value);
     var table_dynamic = ``;
-    for (var i = 0; i < 11; i++) {
+    for (var i = 0; i < 10 ; i++) {
 
       var proj_result = calculateProjectedData(var_year);
       table_dynamic += `
@@ -265,38 +265,57 @@
       var_year += 3;
 
     }
-    tab_cap.innerText = `Projected SIP returns for various time durations. [ @${expreturn.value} ]`;
+    tab_cap.innerText = `Projected SIP returns after ${invstperiod.value} years. [ @${expreturn.value} %]`;
     projectTable.innerHTML = table_dynamic;
 
   }
+
+  var a = ['', 'One ', 'Two ', 'Three ', 'Four ', 'Five ', 'Six ', 'Seven ', 'Eight ', 'Nine ', 'Ten ', 'Eleven ', 'Twelve ', 'Thirteen ', 'Fourteen ', 'Fifteen ', 'Sixteen ', 'Seventeen ', 'Eighteen ', 'Nineteen '];
+  var b = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+
+  function inWords(num) {
+    if ((num = num.toString()).length > 9) return 'overflow';
+    n = ('000000000' + num).substr(-9).match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
+    if (!n) return; var str = '';
+    str += (n[1] != 0) ? (a[Number(n[1])] || b[n[1][0]] + ' ' + a[n[1][1]]) + 'Crore ' : '';
+    str += (n[2] != 0) ? (a[Number(n[2])] || b[n[2][0]] + ' ' + a[n[2][1]]) + 'Lakh ' : '';
+    str += (n[3] != 0) ? (a[Number(n[3])] || b[n[3][0]] + ' ' + a[n[3][1]]) + 'Thousand ' : '';
+    str += (n[4] != 0) ? (a[Number(n[4])] || b[n[4][0]] + ' ' + a[n[4][1]]) + 'Hundred ' : '';
+    str += (n[5] != 0) ? ((str != '') ? 'and ' : '') + (a[Number(n[5])] || b[n[5][0]] + ' ' + a[n[5][1]]) + 'only ' : '';
+    return str;
+  }
+
 
   function loadResult() {
     result = calculateSIP();
     window.scrollBy(0, 350);
     rf1.innerText = 'Rs. ' + result.expected_amount;
+    rf12.innerText = '('+ inWords(result.expected_amount) + ')';
     rf2.innerText = 'Rs. ' + result.amount_invested;
+    rf22.innerText = '('+ inWords(result.amount_invested) + ')';
     rf3.innerText = 'Rs. ' + result.profit_earned;
+    rf32.innerText = '('+ inWords(result.profit_earned) + ')';
     createGraph();
     createTable();
     console.log(result);
   }
   $("#calculatebtn").click(function () {
-      val_amnt.style.display='none';
-      val_rate.style.display='none';
-      val_per.style.display='none';
+    val_amnt.style.display = 'none';
+    val_rate.style.display = 'none';
+    val_per.style.display = 'none';
     if (validateInput()) {
-     
+
       $("#result_cont").fadeIn();
       loadResult();
     } else {
       if (invstamount.value == "") {
-       val_amnt.style.display='block';
+        val_amnt.style.display = 'block';
       }
       if (invstperiod.value == "") {
-        val_per.style.display='block';
+        val_per.style.display = 'block';
       }
       if (expreturn.value == "") {
-        val_rate.style.display='block';
+        val_rate.style.display = 'block';
       }
     }
 

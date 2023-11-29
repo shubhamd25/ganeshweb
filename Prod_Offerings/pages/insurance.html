@@ -180,9 +180,11 @@
 
 
     }
-    header a{
+
+    header a {
       text-transform: none;
     }
+
     .dropbtn {
       text-transform: none !important;
     }
@@ -204,10 +206,10 @@
 
         <div class="btn-group" style="height: 1rem !important;">
           <a href="https://demo.investwell.app/app/#/login">
-          <button class="btn btn-primary" style="padding: 5px 28px;">Login</button></a>
+            <button class="btn btn-primary" style="padding: 5px 28px;">Login</button></a>
         </div>
 
-        <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
+        <button class="theme-btn active" aria-label="Change Theme" title="Change Theme" data-theme-btn>
           <span class="icon"></span>
         </button>
 
@@ -224,16 +226,16 @@
         <a href="../../index.html#about">About Us</a>
 
         <div class="dropdown">
-          <button class="dropbtn active" style="background-color: var(--bg-primary);" >Product & Services
+          <button class="dropbtn active" style="background-color: var(--bg-primary);">Product & Services
           </button>
           <div class="dropdown-content">
             <a href="../index.html">All Products</a>
             <a href="./mutual.html">Mutual Funds</a>
-            <a href="./insurance.html" >Insurance</a>
-            <a href="./fip.html" >Fixed Income Products</a>
-            <a href="./loan.html" >Loan</a>
-            <a href="./properties.html" >Properties</a>
-            <a href="./itr.html" >Tax Planning/Filling</a>
+            <a href="./insurance.html">Insurance</a>
+            <a href="./fip.html">Fixed Income Products</a>
+            <a href="./loan.html">Loan</a>
+            <a href="./properties.html">Properties</a>
+            <a href="./itr.html">Tax Planning/Filling</a>
           </div>
         </div>
         <div class="dropdown">
@@ -291,9 +293,12 @@
         <script type="text/javascript">
           function changeTxt(t, o, name) {
             var o = document.getElementById(o);
+            var x = document.getElementById('Insurance_Type1');
             var name = document.getElementById(name);
             o.innerHTML = t; //Will change the text within the H1 tag to whatever you supply in the first argument, 't'.
             name.value = t;
+            x.value = t;
+            
 
           }
         </script>
@@ -517,7 +522,8 @@
               financial burdens from unexpected events.
             </p>
             <div class="btn-group" style="margin-top: 20px;">
-              <button class="btn btn-primary" onclick="changeTxt('Insurance','text','Insurance_Type')"><a href="#contact">Enquire Now</a></button>
+              <button class="btn btn-primary" onclick="changeTxt('Insurance','text','Insurance_Type')"><a
+                  href="#contact">Enquire Now</a></button>
             </div>
 
           </div>
@@ -534,7 +540,8 @@
               shielding individuals and businesses from financial strain.
             </p>
             <div class="btn-group" style="margin-top: 20px;">
-              <button class="btn btn-primary" onclick="changeTxt('Insurance','text','Insurance_Type')"><a href="#contact">Enquire Now</a></button>
+              <button class="btn btn-primary" onclick="changeTxt('Insurance','text','Insurance_Type')"><a
+                  href="#contact">Enquire Now</a></button>
             </div>
           </div>
         </div>
@@ -549,7 +556,8 @@
               illnesses, and disasters, promoting security.
             </p>
             <div class="btn-group" style="margin-top: 20px;">
-              <button class="btn btn-primary" onclick="changeTxt('Insurance','text','Insurance_Type')"><a href="#contact">Enquire Now</a></button>
+              <button class="btn btn-primary" onclick="changeTxt('Insurance','text','Insurance_Type')"><a
+                  href="#contact">Enquire Now</a></button>
             </div>
           </div>
         </div>
@@ -563,7 +571,8 @@
               aids recovery, and reduces <span></span> strain.
             </p>
             <div class="btn-group" style="margin-top: 20px;">
-              <button class="btn btn-primary" onclick="changeTxt('Insurance','text','Insurance_Type')"><a href="#contact">Enquire Now</a></button>
+              <button class="btn btn-primary" onclick="changeTxt('Insurance','text','Insurance_Type')"><a
+                  href="#contact">Enquire Now</a></button>
             </div>
           </div>
         </div>
@@ -609,7 +618,7 @@
               style="border: 2px solid var(--raw-seinna);"></div>
           <!--<div class="column"><img src="../../assets/images/partners/4.png" alt=""
               style="border: 2px solid var(--raw-seinna);"></div>-->
-              
+
         </div>
         <!--add more rows if required-->
         <!--<div class="row" style="display: flex !important;">
@@ -632,7 +641,7 @@
     <!--contact us-->
     <div id="contact">
       <section class="contact container" style="position: relative; top: 16px;">
-        <form action="" class="contact-form">
+        <form method="post" action="https://success.mycashflowhub.com" class="contact-form">
           <h2 class="h3 section-title" style="text-align: center; font-size: 20px; margin-bottom: 0px;" id="text">
             Insurance</h2>
 
@@ -652,13 +661,13 @@
 
           <div class="form-wrapper" style="margin-bottom: 4px;">
 
-            <label for="name" class="form-label" style="margin-bottom: 0px;">Insurance Type</label>
+            <label for="Insurance_Type" class="form-label" style="margin-bottom: 0px;">Insurance Type</label>
 
             <div class="input-wrapper">
 
 
-              <input type="text" name="Insurance Type" id="Insurance_Type" class="input-field" value="not defined"
-                disabled>
+              <input type="text" name="Insurance Type" id="Insurance_Type" class="input-field" value="not defined" disabled>
+              <input type="hidden" name="Insurance Type" id="Insurance_Type1" class="input-field" value="not defined">
 
               <ion-icon name="cash-outline"></ion-icon>
 
@@ -695,7 +704,7 @@
 
           </div>
 
-          <div class="form-wrapper" >
+          <div class="form-wrapper">
 
             <label for="message" class="form-label" style="margin-bottom: 0px;">Message</label>
 
@@ -713,17 +722,18 @@
           <button type="submit" class="btn btn-primary">Send</button>
 
         </form>
-     
+
         <style>
           @media (min-width : 900px) {
             .response {
               height: fit-content;
               position: relative;
-             
+
               margin-top: 0px !important;
               width: 100%;
             }
-            .contactimg{
+
+            .contactimg {
               background-image: url("../../assets/images/500by600equirenew.png");
               background-repeat: no-repeat;
               background-size: cover;
@@ -732,13 +742,10 @@
               border-radius: 10px;
             }
           }
-          
-
-         
         </style>
 
         <div class="response">
-            <div class="contactimg"></div>
+          <div class="contactimg"></div>
 
 
         </div>
@@ -781,7 +788,8 @@
             margin-left: auto;border-radius: 40%;">
             <h4 class="h3 contact-item-title">SHRIKANT</h4>
             <p class="section-text" style="-webkit-line-clamp: unset; padding-top: 0px !important;">
-              I'm so glad I found MyCashFlow! Their customized financial plans have helped me secure my future. Highly recommended!
+              I'm so glad I found MyCashFlow! Their customized financial plans have helped me secure my future. Highly
+              recommended!
             </p>
           </div>
         </div>
@@ -793,7 +801,8 @@
             margin-left: auto;border-radius: 40%;">
             <h4 class="h3 contact-item-title">VINAY</h4>
             <p class="section-text" style="-webkit-line-clamp: unset; padding-top: 0px !important;">
-              As a business partner, I can't praise MyCashFlow enough. Their advice and coordination have been instrumental in our success.
+              As a business partner, I can't praise MyCashFlow enough. Their advice and coordination have been
+              instrumental in our success.
             </p>
           </div>
         </div>
@@ -925,7 +934,7 @@
 
       </div>
 
-      <form action="" class="contact-form">
+      <form method="post" action="https://success.mycashflowhub.com" class="contact-form">
 
         <div class="form-wrapper">
 

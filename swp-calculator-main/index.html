@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,10 +8,10 @@
   <title>SWP (Systematic Withdrawal Plan) Calculator </title>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&subset=latin-ext&display=swap" media="all" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
 </head>
 <style>
-
   header,
   nav,
   section,
@@ -29,7 +28,7 @@
 
   html,
   body {
-    font-family: nunito, sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;
     font-weight: 400;
     background-color: #aaf3b4;
     font-size: 16px;
@@ -58,7 +57,7 @@
 
   html,
   body {
-    background: #ffffff;
+    background: white;
     color: #61ac52;
     font-family: nunito, sans-serif
   }
@@ -120,7 +119,6 @@
     transition: background 1s ease-out;
     outline: none !important;
     cursor: pointer;
-    position: relative
   }
 
   .btn-primary-line:hover {
@@ -258,7 +256,7 @@
   .outputLabel {
     margin-top: 1em;
     font-size: 18px;
-    background: #f0fff0;
+    background: #bbf8bb;
     border-radius: 7px;
     padding: 20px
   }
@@ -275,62 +273,220 @@
   span.errormsg {
     font-size: 13px
   }
+
+  /* Add a black background color to the top navigation */
+  .topnav {
+    background-color: #2D3047;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+  }
+
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  /* Change the color of links on hover */
+
+
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: whitesmoke;
+  }
+
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {
+      display: none;
+    }
+
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {
+      position: fixed;
+      width: 100%;
+      top: 0;
+    }
+
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+
+    .left {
+      margin-left: 0% !important;
+    }
+    .marg{
+    margin-top: 20% !important;
+  }
+  .font-style{
+   font-size: larger !important; 
+   font-weight: 600;
+   margin-bottom: 4% !important;
+  }
+  }
+
+  .left {
+    margin-left: 2%;
+    font-size: large !important;
+    font-size: 1.25rem !important;
+
+  }
+
+  .container {
+    padding-right: 8%;
+    padding-left: 8%;
+  }
+  .marg{
+    margin-top: 8%;
+  }
+  .font-style{
+   font-size: xx-large; 
+   font-weight: 600;
+   margin-bottom: 2%;
+   margin-left: 1%;
+   margin-right: 1%;
+  }
 </style>
 
-<body>
-      <div class="container mt-4">
 
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="contact-bottom">
-              <div class="row">
-                <div class="col-lg-12 col-sm-12">
-                  <div class="contact-form">
-                    <h1 class="text-center">SWP (Systematic Withdrawal Plan) Calculator</h1>
-                    <form method="post" name="SWPCalculatorForm" id="SWPCalculatorForm" class="app-form"
-                      onsubmit="return false;">
-                      <input type="hidden" name="_token" value="446fJxSI7u5LW4T3JfaXSvheuM9EOlcbQ3EqlceA">
-                      <div class="row">
-                        <div class="col-lg-6 col-sm-12">
-                          <div class="col-lg-12 col-sm-12 col12p">
-                            <label class="form-group">Total Investment (₹) <span class="error">*</span></label>
-                            <input type="text" id="total_investment" name="total_investment" placeholder="1000000">
-                            <span class="control-label total_investment-error"></span>
-                          </div>
-                          <div class="col-lg-12 col-sm-12 col12p">
-                            <label class="form-group">Withdrawal Per Month (₹) <span class="error">*</span></label>
-                            <input type="text" id="withdrawal_per_month" name="withdrawal_per_month"
-                              placeholder="10000">
-                          </div>
-                          <div class="col-lg-12 col-sm-12 col12p">
-                            <label class="form-group">Expected Return Rate (%) <span class="error">*</span></label>
-                            <input type="text" id="expected_return_rate" name="expected_return_rate" placeholder="10">
-                          </div>
-                          <div class="col-lg-12 col-sm-12 col12p">
-                            <label class="form-group">Time Period (Yrs) <span class="error">*</span></label>
-                            <input type="text" id="time_period" name="time_period" placeholder="3">
-                          </div>
-                          <div class="col-lg-12">
-                            <button type="submit" name="SWPCalculatorsubmit" id="SWPCalculatorsubmit"
-                              class="btn-primary-line">Calculate</button>
-                          </div>
+<body>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+  <div class="topnav" id="myTopnav">
+    <a href="" class="left" style="float: left; margin-right: 40%;">SWP Calculator</a>
+
+    <a href="../index.html" style="margin-right: 14%;">Home</a>
+
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <div class="marg">
+    <h1 class="text-center font-style">SWP (Systematic Withdrawal Plan) Calculator</h1>
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="contact-bottom">
+            <div class="row">
+              <div class="col-lg-12 col-sm-12">
+                <div class="contact-form">
+
+                  <form method="post" name="SWPCalculatorForm" id="SWPCalculatorForm" class="app-form"
+                    onsubmit="return false;">
+                    <input type="hidden" name="_token" value="446fJxSI7u5LW4T3JfaXSvheuM9EOlcbQ3EqlceA">
+                    <div class="row">
+                      <div class="col-lg-6 col-sm-12">
+                        <div class="col-lg-12 col-sm-12 col12p">
+                          <label class="form-group">Total Investment (₹) <span class="error">*</span></label>
+                          <input type="text" id="total_investment" name="total_investment" placeholder="1000000">
+                          <span class="control-label total_investment-error"></span>
                         </div>
-                        <div class="col-lg-6 col-sm-12">
-                          <p class="outputLabel">Total Investment: <span class="outputValue" id="r1">₹10,00,000</span>
-                          </p>
-                          <div id="slowDownPage"></div>
-                          <p class="outputLabel">Total Withdrawal: <span class="outputValue" id="r2">₹3,60,000</span>
-                          </p>
-                          <p class="outputLabel">Final Value: <span class="outputValue" id="r3">₹9,15,908</span></p>
+                        <div class="col-lg-12 col-sm-12 col12p">
+                          <label class="form-group">Withdrawal Per Month (₹) <span class="error">*</span></label>
+                          <input type="text" id="withdrawal_per_month" name="withdrawal_per_month" placeholder="10000">
+                        </div>
+                        <div class="col-lg-12 col-sm-12 col12p">
+                          <label class="form-group">Expected Return Rate (%) <span class="error">*</span></label>
+                          <input type="text" id="expected_return_rate" name="expected_return_rate" placeholder="10">
+                        </div>
+                        <div class="col-lg-12 col-sm-12 col12p">
+                          <label class="form-group">Time Period (Yrs) <span class="error">*</span></label>
+                          <input type="text" id="time_period" name="time_period" placeholder="3">
+                        </div>
+                        <div class="col-lg-12">
+                          <button type="submit" name="SWPCalculatorsubmit" id="SWPCalculatorsubmit #r3"
+                            class="btn-primary-line">Calculate</button>
                         </div>
                       </div>
-                    </form>
-                  </div>
+                      <div class="col-lg-6 col-sm-12">
+                        <p class="outputLabel">Total Investment: <span class="outputValue" id="r1">₹10,00,000 <span id="r11"> ( Ten Lakh )</span></span>
+                        </p>
+                        <div id="slowDownPage"></div>
+                        <p class="outputLabel">Total Withdrawal: <span class="outputValue" id="r2">₹3,60,000<span id="r21"> ( Three Lakh Sixty Thousand )</span></span>
+                        </p>
+                        <p class="outputLabel">Final Value: <span class="outputValue" id="r3">₹9,15,908 <span id="r31"> ( Nine Lakh Seventy Eight Thousand One Hundred and Eighty Five only)</span></span></p>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
+          </div>
 
-  </section>
+        </div>
+      </div>
+    </div>
+
+  </div><br><br>
+  <style>
+    .disclaimer {
+    text-align: center;
+    background-color: hsl(24, 74%, 58%);;
+    padding-block: 8px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: smaller;
+    color: black;
+}
+  </style>
+  <div
+      style="font-family: 'Roboto' , sans-serif !important; " class="disclaimer">
+      <p>
+        <strong> Universe Enterprise </strong>
+        <br><br>
+        Registration No. 2352300317895448
+
+        F.No.202 P.N0.17 Chatrapati Apartment, Manish Nagar, Nagpur -440015 <br>
+
+        Registration Details: AMFI Reg No.: ARN- <br>
+
+        Disclaimer: Investment in securities market are subject to market risks, read all the related documents
+        carefully before investing.
+
+
+        <div></div>
+        <strong>Copyright © 2023 Universe Enterprise</strong>
+      </p>
+    </div>
+
 
   <script src="jquery-2.1.0.min.js"></script>
 

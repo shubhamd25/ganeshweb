@@ -81,6 +81,7 @@
     myChart.data.datasets[0].data[1] = loanAmount;
     myChart.data.datasets[0].data[2] = processingFees;
     myChart.update();
+    $("html, body").animate({ scrollTop: $("#slowDownPage").offset().top - 220 }, 1000);
   };
   
   const refreshInputValues = () => {

@@ -4,14 +4,16 @@
     font-family: "Inter", sans-serif;
    margin-bottom: 30px;
     width: 98%;
+    margin-left: 1%;
     background: #fff;
     box-shadow: 12px 12px 50px -11px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     color: #14213d;
     overflow: hidden;
     display: flex;
+    height: fit-content;
     flex-direction: row;
-    padding-bottom: 170px;
+    padding-bottom: 25px;
 }
 
 .sun {
@@ -161,7 +163,7 @@
 }
 
 .loan-calculator .right {
-    width: 50%;
+    width: 90%;
 }
 
 .start {
@@ -308,7 +310,7 @@
     .loan-calculator {
         width: 96%;
         max-width: 600px;
-        min-height: 1400px;
+      
         display: flex;
         flex-direction: column;
     }

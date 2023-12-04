@@ -22,3 +22,23 @@ var a = ['', 'One ', 'Two ', 'Three ', 'Four ', 'Five ', 'Six ', 'Seven ', 'Eigh
     str += (n[5] != 0) ? ((str != '') ? 'and ' : '') + (a[Number(n[5])] || b[n[5][0]] + ' ' + a[n[5][1]]) + 'only' : '';
     return str;
   }
+
+  $(document).ready(function(){
+    var accordionOpen = $('.first_depth p'),
+        secondDepth = $('.second_depth');
+    
+    accordionOpen.on('click', function(){
+        var parentFirstDepth = $(this).closest('.first_depth');
+        
+        if (parentFirstDepth.hasClass('on')) {
+            // If the clicked item is already open, close it
+            parentFirstDepth.removeClass('on');
+        } else {
+            // If the clicked item is closed, close any open items and open it
+            accordionOpen.closest('.first_depth').removeClass('on');
+            parentFirstDepth.addClass('on');
+        }
+    });
+  });
+  
+  

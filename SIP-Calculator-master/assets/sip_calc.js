@@ -1,4 +1,22 @@
 
+$(document).ready(function(){
+    var accordionOpen = $('.first_depth p'),
+        secondDepth = $('.second_depth');
+    
+    accordionOpen.on('click', function(){
+        var parentFirstDepth = $(this).closest('.first_depth');
+        
+        if (parentFirstDepth.hasClass('on')) {
+            // If the clicked item is already open, close it
+            parentFirstDepth.removeClass('on');
+        } else {
+            // If the clicked item is closed, close any open items and open it
+            accordionOpen.closest('.first_depth').removeClass('on');
+            parentFirstDepth.addClass('on');
+        }
+    });
+  });
+  
 
 // let var1= investment amount
 // let var2= investment period

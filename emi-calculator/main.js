@@ -27,7 +27,7 @@ let interest = interestRate / 12 / 100;
 let myChart;
 
 const checkValues = () => {
-  let loanAmountValue = loanAmountInput.value;
+  let loanAmountValue =  loanAmountInput.value;
   let interestRateValue = interestRateInput.value;
   let loanTenureValue = loanTenureInput.value;
 
@@ -67,7 +67,7 @@ const displayChart = (totalInterestPayableValue) => {
   });
 };
 
-const updateChart = (totalInterestPayableValue, processingFees) => {
+const updateChart = (totalInterestPayableValue) => {
   myChart.data.datasets[0].data[0] = totalInterestPayableValue;
   myChart.data.datasets[0].data[1] = loanAmount;
 
@@ -99,23 +99,22 @@ const calculateEMI = () => {
 };
 
 const updateData = (emi) => {
-  loanEMIValue.innerHTML = Math.ceil(emi);
+  let emi1 = Math.floor(emi);
+  loanEMIValue.innerHTML = emi1;
+  document.getElementById('r11').innerHTML = convertToWords(emi1);
 
-  let processingFees = 0;
-
-  let totalDownPay = 0;
-
-
-  let totalAmount = Math.ceil(loanTenure1 * emi);
+  let totalAmount = Math.floor(loanTenure1 * emi);
   totalAmountValue.innerHTML = totalAmount;
+  document.getElementById('r13').innerHTML = convertToWords(totalAmount);
 
-  let totalInterestPayable = Math.ceil(totalAmount - loanAmount);
+  let totalInterestPayable = Math.floor(totalAmount - loanAmount);
   totalInterestValue.innerHTML = totalInterestPayable;
+  document.getElementById('r12').innerHTML = convertToWords(totalInterestPayable);
 
   if (myChart) {
-    updateChart(totalInterestPayable, processingFees);
+    updateChart(totalInterestPayable);
   } else {
-    displayChart(totalInterestPayable, processingFees);
+    displayChart(totalInterestPayable);
   }
 };
 
@@ -127,3 +126,129 @@ const init = () => {
 init();
 
 calculateBtn.addEventListener("click", init);
+
+function inWords(n) {
+  const wordsMap = {
+    0: "Zero",
+    1: "One",
+    2: "Two",
+    3: "Three",
+    4: "Four",
+    5: "Five",
+    6: "Six",
+    7: "Seven",
+    8: "Eight",
+    9: "Nine",
+    10: "Ten",
+    11: "Eleven",
+    12: "Twelve",
+    13: "Thirteen",
+    14: "Fourteen",
+    15: "Fifteen",
+    16: "Sixteen",
+    17: "Seventeen",
+    18: "Eighteen",
+    19: "Nineteen",
+  };
+
+  const tensMap = {
+    2: "Twenty",
+    3: "Thirty",
+    4: "Forty",
+    5: "Fifty",
+    8: "Eighty",
+  };
+
+  if (n in wordsMap) {
+    return wordsMap[n];
+  } else {
+    const tens = Math.floor(n / 10);
+    const ones = n % 10;
+
+    let words = "";
+
+    if (tens > 0) {
+      words += tensMap[tens] || inWords(tens);
+    }
+
+    if (tens > 0 && ones > 0) {
+      words += " ";
+    }
+
+    if (ones > 0) {
+      words += inWords(ones);
+    }
+
+    return words;
+  }
+}
+
+
+function convertToWords(n) {
+  if (n === 0) {
+    return "Zero";
+  } else {
+    const crores = Math.floor(n / 10000000);
+    const lakhs = Math.floor((n % 10000000) / 100000);
+    const thousands = Math.floor((n % 100000) / 1000);
+    const hundreds = Math.floor((n % 1000) / 100);
+    const tens = Math.floor((n % 100) / 10);
+    const ones = n % 10;
+
+    let words = "";
+
+    if (crores > 0) {
+      words += inWords(crores) + " Crore";
+    }
+
+    if (lakhs > 0) {
+      if (words.length > 0) {
+        words += " ";
+      }
+      words += inWords(lakhs) + " Lakh";
+    }
+
+    if (thousands > 0) {
+      if (words.length > 0) {
+        words += " ";
+      }
+      words += inWords(thousands) + " Thousand";
+    }
+
+    if (hundreds > 0) {
+      if (words.length > 0) {
+        words += " ";
+      }
+      words += inWords(hundreds) + " Hundred";
+    }
+
+    if (tens > 0) {
+      if (words.length > 0) {
+        words += " ";
+      }
+      words += inWords(tens * 10);
+    }
+
+    if (ones > 0) {
+      if (words.length > 0) {
+        words += " ";
+      }
+      words += inWords(ones);
+    }
+
+    return words;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

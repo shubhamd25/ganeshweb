@@ -72,7 +72,7 @@ const updateChart = (totalInterestPayableValue) => {
   myChart.data.datasets[0].data[1] = loanAmount;
 
   myChart.update();
-  $("html, body").animate({ scrollTop: $("#slowDownPage").offset().top - 220 }, 1000);
+  $("html, body").animate({ scrollTop: $("#r12").offset().top - 270 }, 1000);
 };
 
 const refreshInputValues = () => {
